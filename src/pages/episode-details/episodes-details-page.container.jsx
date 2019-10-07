@@ -8,20 +8,17 @@ const GET_EPISODE_BY_ID = ggl`
 
         }
     }
-`
+`;
 
 const EpisodeDetailsContainer = ({ match }) => (
-    <Query query={GET_EPISODE_BY_ID} variables={{id: match.params.episodeId }}>
-        {
-            ({ loading, error, data:{getEpisodeById} }) => {
-                if (loading) {
-                    return
-                }
-                return
-            }
-        }
+  <Query query={GET_EPISODE_BY_ID} variables={{ id: match.params.episodeId }}>
+    {({ loading, error, data: { getEpisodeById } }) => {
+      if (loading) {
+        return;
+      }
+      return;
+    }}
+  </Query>
+);
 
-    </Query>
-)
-
-export default EpisodesContainer;
+export default EpisodeDetailsContainer;

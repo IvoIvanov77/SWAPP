@@ -1,22 +1,29 @@
 import React from 'react';
-import { Query } from 'react-apollo';
-import { ggl } from 'apollo-boost';
+// import { Query } from 'react-apollo';
+// import { gql } from 'apollo-boost';
 
-const GET_EPISODES = ggl`
-`
+import EpisodesPage from './episodes-page.component';
+
+// const GET_EPISODES = gql`
+//     allEpisodes {
+//         id
+//         title
+//     }
+// `
 
 const EpisodesContainer = () => (
-    <Query query={GET_EPISODES}>
-        {
-            ({ loading, error, data }) => {
-                if(loading){
-                    return
-                }
-                return 
-            }
-        }
-
-    </Query>
-)
+  // <Query query={}>
+  //     {
+  //         ({ loading, error, data }) => {
+  //             if(loading){
+  //                 return
+  //             }
+  //             console.log(data)
+  //             return <EpisodesPage/>
+  //         }
+  //     }
+  // </Query>
+  <EpisodesPage />
+);
 
 export default EpisodesContainer;
