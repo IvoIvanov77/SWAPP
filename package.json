@@ -32,7 +32,7 @@
     "src/**/*.{js,jsx}": [
       "prettier --write",
       "eslint --max-warnings=0",
-      "npm test --bail --findRelatedTests",
+      
       "git add"
     ]
   },
@@ -56,5 +56,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+
+  "comments": {
+    "src/**/*.{js,jsx}":"npm test --bail --findRelatedTests"
   }
 }
