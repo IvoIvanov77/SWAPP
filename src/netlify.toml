@@ -1,4 +1,4 @@
 [build]
 base = "/"
-publish = "/storybook-static/"
-command = "npm run ci && npm run storybook"
+publish = "/build"
+command = "npm run ci && npm build"
