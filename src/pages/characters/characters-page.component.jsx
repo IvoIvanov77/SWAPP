@@ -1,7 +1,15 @@
 import React from 'react';
 
-const ChatactersPage = () => {
-  return <h1>Characters</h1>;
+import Character from '../../components/character/character.component';
+
+const ChatactersPage = ({ characters }) => {
+  return (
+    <div className="characters-overview">
+      {characters.map(({ id, ...otherProps }) => (
+        <Character key={id} {...otherProps} />
+      ))}
+    </div>
+  );
 };
 
 export default ChatactersPage;

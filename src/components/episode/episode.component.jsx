@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Episode = ({ image, title, openingCrawl }) => {
+import { withRouter } from 'react-router-dom';
+
+const Episode = ({ image, title, openingCrawl, history, linkUrl, match }) => {
   return (
-    <div>
+    <div onClick={() => history.push(`${match.url}/${linkUrl}`)}>
       <img src={image} alt={title}></img>
       <h2>{title}</h2>
       <p>{openingCrawl}</p>
@@ -10,4 +12,4 @@ const Episode = ({ image, title, openingCrawl }) => {
   );
 };
 
-export default Episode;
+export default withRouter(Episode);
