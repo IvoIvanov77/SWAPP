@@ -6,6 +6,8 @@ import Header from './components/header/header.component';
 import { default as EpisodesPage } from './pages/episodes/episodes-page.container';
 import { default as CharacterPage } from './pages/characters/characters-page.container';
 import { default as LoginPage } from './pages/login/login-page.container';
+import { default as EpisodeDetaislPage } from './pages/episode-details/episodes-details-page.container';
+import { default as CharacterDetailsPage } from './pages/character-details/character-details-page.container';
 import './App.css';
 
 function App() {
@@ -15,7 +17,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={EpisodesPage} />
         <Route exact path="/episodes" component={EpisodesPage} />
+        <Route exact path="/episodes/:id" component={EpisodeDetaislPage} />
         <Route exact path="/characters" component={CharacterPage} />
+        <Route exact path="/characters/:id" component={CharacterDetailsPage} />
         <Route exact path="/login" component={LoginPage} />
         {/* <Route
           exact

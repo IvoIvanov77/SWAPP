@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatactersPage from '../characters/characters-page.component';
+// import ChatactersPage from '../characters/characters-page.component';
 
 const EpisodeDetaislPage = ({ episode }) => {
   const {
@@ -8,7 +8,7 @@ const EpisodeDetaislPage = ({ episode }) => {
     image,
     director,
     releaseDate,
-    people,
+    // people,
     episodeId,
   } = episode;
   return (
@@ -23,9 +23,9 @@ const EpisodeDetaislPage = ({ episode }) => {
         <p>{director}</p>
         <p>{releaseDate}</p>
       </div>
-      <div>
+      {/* <div>
         <ChatactersPage characters={people} />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -6,7 +6,7 @@ const ChatactersPage = ({ characters }) => {
   return (
     <div className="characters-overview">
       {characters.map(({ id, ...otherProps }) => (
-        <Character key={id} {...otherProps} />
+        <Character key={id} linkUrl={id} {...otherProps} />
       ))}
     </div>
   );

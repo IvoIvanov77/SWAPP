@@ -2,7 +2,7 @@ import React from 'react';
 
 import { withRouter } from 'react-router-dom';
 
-const Character = ({ image, name, history, linkUrl, match }) => {
+const Starchip = ({ image, name, history, linkUrl, match }) => {
   return (
     <div onClick={() => history.push(`${match.url}/${linkUrl}`)}>
       <img src={image} alt={name}></img>
@@ -11,4 +11,4 @@ const Character = ({ image, name, history, linkUrl, match }) => {
   );
 };
 
-export default withRouter(Character);
+export default withRouter(Starchip);
