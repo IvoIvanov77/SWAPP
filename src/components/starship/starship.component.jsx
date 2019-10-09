@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Starchip = ({ image, name, history, linkUrl, match }) => {
+const Starchip = ({ image, name, linkUrl }) => {
   return (
-    <div onClick={() => history.push(`${match.url}/${linkUrl}`)}>
+    <Link to={`/starships/${linkUrl}`}>
       <img src={image} alt={name}></img>
       <h2>{name}</h2>
-    </div>
+    </Link>
   );
 };
 
-export default withRouter(Starchip);
+export default Starchip;
