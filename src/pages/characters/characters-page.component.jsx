@@ -1,15 +1,9 @@
 import React from 'react';
 
-import Character from '../../components/character/character.component';
+import CharacterListContainer from '../../components/characters-list/characters-list.container';
 
-const ChatactersPage = ({ characters }) => {
-  return (
-    <div className="characters-overview">
-      {characters.map(({ id, ...otherProps }) => (
-        <Character key={id} linkUrl={id} {...otherProps} />
-      ))}
-    </div>
-  );
+const CharactersPage = () => {
+  return <CharacterListContainer initialCount={3} />;
 };
 
-export default ChatactersPage;
+export default CharactersPage;

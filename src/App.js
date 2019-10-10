@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/header/header.component';
 
 import { default as EpisodesPage } from './pages/episodes/episodes-page.container';
-import { default as CharacterPage } from './pages/characters/characters-page.container';
+import { default as CharactersPage } from './pages/characters/characters-page.component';
 import { default as LoginPage } from './pages/login/login-page.container';
 import { default as EpisodeDetaislPage } from './pages/episode-details/episodes-details-page.container';
 import { default as CharacterDetailsPage } from './pages/character-details/character-details-page.container';
@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/" component={EpisodesPage} />
         <Route exact path="/episodes" component={EpisodesPage} />
         <Route exact path="/episodes/:id" component={EpisodeDetaislPage} />
-        <Route exact path="/characters" component={CharacterPage} />
+        <Route exact path="/characters" component={CharactersPage} />
         <Route exact path="/characters/:id" component={CharacterDetailsPage} />
         <Route
           exact
