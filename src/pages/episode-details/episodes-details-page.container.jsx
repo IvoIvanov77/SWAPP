@@ -1,6 +1,7 @@
 import React from 'react';
-import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
+
 import EpisodeDetaislPage from './episode-details-page.component';
 
 const GET_EPISODE_BY_ID = gql`
@@ -17,18 +18,21 @@ const GET_EPISODE_BY_ID = gql`
   }
 `;
 
-const EpisodeDetailsContainer = ({ match }) => (
-  <Query query={GET_EPISODE_BY_ID} variables={{ id: match.params.id }}>
-    {({ loading, error, data }) => {
-      if (loading) {
-        return <h1>Loading.......</h1>;
-      }
-      if (data) {
-        const { episode } = data;
-        return <EpisodeDetaislPage episode={episode} />;
-      }
-    }}
-  </Query>
-);
+const EpisodeDetailsContainer = ({ match }) => {
+  const { loading, error, data } = useQuery(GET_EPISODE_BY_ID, {
+    variables: { id: match.params.id },
+  });
+
+  if (loading) {
+    return <h1>Loading.......</h1>;
+  }
+  if (error) {
+    return <h1>Error page</h1>;
+  }
+  if (data) {
+    const { episode } = data;
+    return <EpisodeDetaislPage episode={episode} />;
+  }
+};
 
 export default EpisodeDetailsContainer;

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
+
 import CharacterDetaislPage from './character-details-page.component';
 
 const GET_CHARACTER_BY_ID = gql`
@@ -28,19 +29,21 @@ const GET_CHARACTER_BY_ID = gql`
   }
 `;
 
-const CharacterDetailsContainer = ({ match }) => (
-  <Query query={GET_CHARACTER_BY_ID} variables={{ id: match.params.id }}>
-    {({ loading, error, data }) => {
-      if (loading) {
-        return <h1>Loading.......</h1>;
-      }
-      if (data) {
-        console.log(data);
-        const { person } = data;
-        return <CharacterDetaislPage person={person} />;
-      }
-    }}
-  </Query>
-);
+const CharacterDetailsContainer = ({ match }) => {
+  const { loading, error, data } = useQuery(GET_CHARACTER_BY_ID, {
+    variables: { id: match.params.id },
+  });
+
+  if (loading) {
+    return <h1>Loading.......</h1>;
+  }
+  if (error) {
+    return <h1>Error page</h1>;
+  }
+  if (data) {
+    const { person } = data;
+    return <CharacterDetaislPage person={person} />;
+  }
+};
 
 export default CharacterDetailsContainer;

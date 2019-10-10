@@ -1,6 +1,6 @@
 import React from 'react';
-import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
 
 import CharactersList from './characters-list.component';
 
@@ -19,51 +19,28 @@ const GET_CHARACTERS = gql`
   }
 `;
 
-class CharactersListContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      charactersList: [],
-      after: undefined,
-      loading: true,
-    };
+const CharactersListContainer = ({ initialCount }) => {
+  const { loading, error, data } = useQuery(GET_CHARACTERS, {
+    variables: { first: initialCount },
+  });
+  let characters = [];
+
+  if (loading) {
+    return <h1>Loading .....</h1>;
+  }
+  if (error) {
+    return <h1>Error page</h1>;
   }
 
-  componentDidMount() {
-    const { initialCount } = this.props;
-    const { after, charactersList } = this.state;
+  if (data) {
+    const edges = data.allPeople.edges;
+    characters = edges.map(e => e.node);
     return (
-      <Query
-        query={GET_CHARACTERS}
-        variables={{ first: initialCount, after: after }}
-      >
-        {({ loading, error, data }) => {
-          let characters = [];
-          if (loading) {
-            this.setState({
-              loading,
-            });
-          }
-          if (data) {
-            console.log(data);
-            const edges = data.allPeople.edges;
-            characters = edges.map(e => e.node);
-            this.setState({
-              charactersList: [...charactersList, characters],
-            });
-          }
-        }}
-      </Query>
+      <div>
+        <CharactersList characters={characters} />
+      </div>
     );
   }
-  render() {
-    const { loading, charactersList } = this.state;
-    if (loading) {
-      return <h1>Loading........</h1>;
-    }
-
-    return <CharactersList characters={charactersList} />;
-  }
-}
+};
 
 export default CharactersListContainer;
