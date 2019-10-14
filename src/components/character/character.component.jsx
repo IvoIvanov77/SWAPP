@@ -1,13 +1,21 @@
 import React from 'react';
-
 import { withRouter } from 'react-router-dom';
+
+import {
+  CharacterContainer,
+  CharacterImage,
+  CharacterNameContainer,
+  CharacterName,
+} from './character.styles';
 
 const Character = ({ image, name, history, linkUrl, match }) => {
   return (
-    <div onClick={() => history.push(`${match.url}/${linkUrl}`)}>
-      <img src={image} alt={name}></img>
-      <h2>{name}</h2>
-    </div>
+    <CharacterContainer onClick={() => history.push(`${match.url}/${linkUrl}`)}>
+      <CharacterImage src={image} alt={name}></CharacterImage>
+      <CharacterNameContainer>
+        <CharacterName>{name}</CharacterName>
+      </CharacterNameContainer>
+    </CharacterContainer>
   );
 };
 

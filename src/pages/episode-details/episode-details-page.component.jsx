@@ -1,6 +1,19 @@
 import React from 'react';
 // import ChatactersPage from '../characters/characters-page.component';
 
+import {
+  DetailsPageContainer,
+  HeaderContainer,
+  EpisodeImage,
+  EpisodeTitleContainer,
+  EpisodeId,
+  EpisodeDetailsContainer,
+  EpisodeDescription,
+  EpisodeDetailsFooterContainer,
+  EpisodeDirectorAndDate,
+  CharactersContainer,
+} from './episode-details-page-styles';
+
 const EpisodeDetaislPage = ({ episode }) => {
   const {
     title,
@@ -12,21 +25,32 @@ const EpisodeDetaislPage = ({ episode }) => {
     episodeId,
   } = episode;
   return (
-    <div>
-      <div>
-        <img src={image} alt={title}></img>
-        <h1>Star Wars: Episode {episodeId}</h1>
-        <h2>{title}</h2>
-      </div>
-      <div>
-        <p>{openingCrawl}</p>
-        <p>{director}</p>
-        <p>{releaseDate}</p>
-      </div>
+    <DetailsPageContainer>
+      <HeaderContainer>
+        <EpisodeImage src={image} alt={title}></EpisodeImage>
+        <EpisodeTitleContainer>
+          <EpisodeId>Star Wars: Episode {episodeId}</EpisodeId>
+          <h2>{title}</h2>
+        </EpisodeTitleContainer>
+      </HeaderContainer>
+      <EpisodeDetailsContainer>
+        <EpisodeDescription>{openingCrawl}</EpisodeDescription>
+        <EpisodeDetailsFooterContainer>
+          <p>
+            Director:{' '}
+            <EpisodeDirectorAndDate>{director}</EpisodeDirectorAndDate>
+          </p>
+          <p>
+            Release Date:{' '}
+            <EpisodeDirectorAndDate>{releaseDate}</EpisodeDirectorAndDate>
+          </p>
+        </EpisodeDetailsFooterContainer>
+      </EpisodeDetailsContainer>
       {/* <div>
         <ChatactersPage characters={people} />
       </div> */}
-    </div>
+      <CharactersContainer>characters</CharactersContainer>
+    </DetailsPageContainer>
   );
 };
 
