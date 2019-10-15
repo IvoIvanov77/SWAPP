@@ -1,12 +1,22 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+
+import {
+  StarshipContainer,
+  StarshipImage,
+  StarshipNameContainer,
+  StarshipName,
+} from './starship.styles';
 
 const Starchip = ({ image, name, linkUrl }) => {
   return (
     <Link to={`/starships/${linkUrl}`}>
-      <img src={image} alt={name}></img>
-      <h2>{name}</h2>
+      <StarshipContainer>
+        <StarshipImage src={image} alt={name}></StarshipImage>
+        <StarshipNameContainer>
+          <StarshipName>{name}</StarshipName>
+        </StarshipNameContainer>
+      </StarshipContainer>
     </Link>
   );
 };
