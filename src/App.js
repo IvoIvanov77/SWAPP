@@ -8,7 +8,7 @@ import { default as CharactersPage } from './pages/characters/characters-page.co
 import { default as LoginPage } from './pages/login/login-page.container';
 import { default as EpisodeDetaislPage } from './pages/episode-details/episodes-details-page.container';
 import { default as CharacterDetailsPage } from './pages/character-details/character-details-page.container';
-import StarshipDetailsPage from './pages/starship-details/starship-details-page.component';
+import { default as StarshipDetailsPage } from './pages/starship-details/starship-details-page.container';
 import './App.css';
 
 function App() {

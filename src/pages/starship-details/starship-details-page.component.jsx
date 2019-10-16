@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { default as StarshipInfo } from '../../components/starship-info/starship-info.container';
+import StarshipInfo from '../../components/starship-info/starship-info.component';
 import {
   DetailsPageContainer,
   StarshipName,
@@ -9,14 +9,16 @@ import {
   RightContainer,
 } from './starship-details-page.styles';
 
-const StarshipDetailsPage = ({ match }) => {
+const StarshipDetailsPage = ({ starship }) => {
+  const { name, model } = starship;
   return (
     <DetailsPageContainer>
-      <StarshipName>Name</StarshipName>
+      <StarshipName>{name}</StarshipName>
+      <h1>{model}</h1>
       <hr />
       <FlexContainer>
         <LeftContainer>
-          <StarshipInfo starshipId={match.params.starshipId} />
+          <StarshipInfo starship={starship} />
         </LeftContainer>
         <RightContainer></RightContainer>
       </FlexContainer>

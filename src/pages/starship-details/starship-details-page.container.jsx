@@ -2,12 +2,13 @@ import React from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
-import StarshipInfo from './starship-info.component';
+import StarshipDetailsPage from './starship-details-page.component';
 
 const GET_STARSHIP_BY_ID = gql`
   query Starship($id: ID!) {
     starship(id: $id) {
       name
+      model
       image
       starshipClass
       cost
@@ -18,9 +19,9 @@ const GET_STARSHIP_BY_ID = gql`
   }
 `;
 
-const StarshipInfoContainer = ({ starshipId }) => {
+const StarshipDetailsPageContainer = ({ match }) => {
   const { loading, error, data } = useQuery(GET_STARSHIP_BY_ID, {
-    variables: { id: starshipId },
+    variables: { id: match.params.starshipId },
   });
 
   if (loading) {
@@ -31,8 +32,8 @@ const StarshipInfoContainer = ({ starshipId }) => {
   }
   if (data) {
     const { starship } = data;
-    return <StarshipInfo starship={starship} />;
+    return <StarshipDetailsPage starship={starship} />;
   }
 };
 
-export default StarshipInfoContainer;
+export default StarshipDetailsPageContainer;
