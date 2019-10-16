@@ -1,5 +1,12 @@
 import React from 'react';
 
+import {
+  StarshipInfoContainer,
+  StarshipName,
+  StarshipImage,
+  StarshipInfoFields,
+} from './starship-info.styles';
+
 const StarshipInfo = ({ starship }) => {
   const {
     name,
@@ -12,19 +19,27 @@ const StarshipInfo = ({ starship }) => {
   } = starship;
 
   return (
-    <div>
-      <div>
-        <h2>{name}</h2>
-        <img src={image} alt={name}></img>
-        <p>Class {starshipClass}</p>
-        <p>Cost {cost}</p>
-        <p>Crew {crew}</p>
+    <StarshipInfoContainer>
+      <StarshipName>{name}</StarshipName>
+      <StarshipImage src={image} alt={name} />
+      <StarshipInfoFields>
         <p>
-          Max Atmospheric Speed {maxAtmosphericSpeed} {crew}
+          Class: <span>{starshipClass}</span>
         </p>
-        <p>Hiperdrive Rating {hyperdriveRating}</p>
-      </div>
-    </div>
+        <p>
+          Cost: <span>{cost}</span>
+        </p>
+        <p>
+          Crew: <span>{crew}</span>
+        </p>
+        <p>
+          Max Atmospheric Speed: <span>{maxAtmosphericSpeed}</span>
+        </p>
+        <p>
+          Hiperdrive Rating: <span>{hyperdriveRating}</span>
+        </p>
+      </StarshipInfoFields>
+    </StarshipInfoContainer>
   );
 };
 
