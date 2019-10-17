@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StarshipContainer = styled.div`
   border-radius: 10px;
-  background-color: #fff;
+  border-color: ${({ theme }) => theme.cards.borderColor};
+  background-color: ${({ theme }) => theme.cards.background};
   display: flex;
   position: relative;
   margin: 20px auto;
@@ -21,6 +22,6 @@ export const StarshipNameContainer = styled.div`
   transform: translateY(-50%);
 `;
 
-export const StarshipName = styled.h1`
-  color: #4bd5ee;
+export const StarshipName = styled.h3`
+  color: ${({ theme }) => theme.primaryHeading.fontColor};
 `;

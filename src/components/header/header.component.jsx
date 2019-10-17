@@ -1,24 +1,30 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import {
+  HeaderContainer,
+  LogoContainer,
+  NavigationListItem,
+} from './header.styles';
+
 const Header = () => {
   return (
-    <div className="header">
-      {/* <Link className='logo-container' to='/'>
-                <Logo className='logo' />
-            </Link> */}
-      <div className="options">
-        <NavLink className="option" to="/episodes">
-          Episodes
+    <HeaderContainer>
+      <LogoContainer>
+        <NavLink to="/">
+          <span>SWAPP</span>
         </NavLink>
-        <NavLink className="option" to="/characters">
-          Characters
-        </NavLink>
-        <NavLink className="option" to="/login">
-          Login
-        </NavLink>
-      </div>
-    </div>
+      </LogoContainer>
+      <NavigationListItem>
+        <NavLink to="/episodes">Episodes</NavLink>
+      </NavigationListItem>
+      <NavigationListItem>
+        <NavLink to="/characters">Characters</NavLink>
+      </NavigationListItem>
+      <NavigationListItem>
+        <NavLink to="/login">Login</NavLink>
+      </NavigationListItem>
+    </HeaderContainer>
   );
 };
 

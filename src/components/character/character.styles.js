@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const CharacterContainer = styled.div`
   border-radius: 10px;
-  background-color: #fff;
+  border-color: ${({ theme }) => theme.cards.borderColor};
+  background-color: ${({ theme }) => theme.cards.background};
   display: flex;
   position: relative;
   margin: 20px;
@@ -22,6 +23,6 @@ export const CharacterNameContainer = styled.div`
   transform: translateY(-50%);
 `;
 
-export const CharacterName = styled.h1`
-  color: #4bd5ee;
+export const CharacterName = styled.h3`
+  color: ${({ theme }) => theme.primaryHeading.fontColor};
 `;

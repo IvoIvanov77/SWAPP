@@ -25,17 +25,3 @@ export const FormInputsContainer = styled.form`
   background-color: #fff;
   width: 80%;
 `;
-
-// #FFF
-
-// export const FormInputContainer = styled.input`
-//   background: none;
-//   background-color: white;
-//   font-size: 18px;
-//   padding: 10px 0px;
-//   width: 100%
-//   display: block;
-//   border: none;
-//   border-radius: 3%;
-//   margin: 25px auto;
-// `;

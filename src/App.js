@@ -2,14 +2,12 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Header from './components/header/header.component';
-
 import { default as EpisodesPage } from './pages/episodes/episodes-page.container';
 import { default as CharactersPage } from './pages/characters/characters-page.component';
 import { default as LoginPage } from './pages/login/login-page.container';
 import { default as EpisodeDetaislPage } from './pages/episode-details/episodes-details-page.container';
 import { default as CharacterDetailsPage } from './pages/character-details/character-details-page.container';
 import { default as StarshipDetailsPage } from './pages/starship-details/starship-details-page.container';
-import './App.css';
 
 function App() {
   return (

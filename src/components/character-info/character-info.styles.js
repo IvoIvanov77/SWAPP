@@ -4,7 +4,8 @@ export const CharacterInfoContainer = styled.div`
   margin: 3%;
   padding: 3px 0;
   border-radius: 10px;
-  background-color: #fff;
+  border-color: ${({ theme }) => theme.cards.borderColor};
+  background-color: ${({ theme }) => theme.cards.background};
 `;
 
 export const CharacterImage = styled.img`
@@ -14,7 +15,7 @@ export const CharacterImage = styled.img`
 `;
 
 export const CharacterName = styled.h2`
-  color: #4bd5ee;
+  color: ${({ theme }) => theme.primaryHeading.fontColor};
   text-align: center;
   margin: 15px;
 `;
@@ -26,5 +27,5 @@ export const CharacterInfoFields = styled.div`
 `;
 
 export const FieldColor = styled.span`
-  color: #4bd5ee;
+  color: ${({ theme }) => theme.primaryHeading.fontColor};
 `;

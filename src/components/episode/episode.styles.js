@@ -4,7 +4,8 @@ export const EpisodeContainer = styled.div`
   margin: 3%;
   width: 20%;
   border-radius: 10px;
-  background-color: #fff;
+  border-color: ${({ theme }) => theme.cards.borderColor};
+  background-color: ${({ theme }) => theme.cards.background};
 `;
 
 export const ImageContainer = styled.img`
@@ -13,8 +14,8 @@ export const ImageContainer = styled.img`
 `;
 
 export const TitleContainer = styled.h2`
-    color: #4BD5EE
-    margin: 15px
+  color: ${({ theme }) => theme.primaryHeading.fontColor};
+  margin: 15px;
 `;
 
 export const DescriptionContainer = styled.p`

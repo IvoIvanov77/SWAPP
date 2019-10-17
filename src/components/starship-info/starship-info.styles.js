@@ -4,7 +4,8 @@ export const StarshipInfoContainer = styled.div`
   margin: 3%;
   padding: 3px 0;
   border-radius: 10px;
-  background-color: #fff;
+  border-color: ${({ theme }) => theme.cards.borderColor};
+  background-color: ${({ theme }) => theme.cards.background};
 `;
 
 export const StarshipImage = styled.img`
@@ -14,7 +15,7 @@ export const StarshipImage = styled.img`
 `;
 
 export const StarshipName = styled.h2`
-  color: #4bd5ee;
+  color: ${({ theme }) => theme.primaryHeading.fontColor};
   text-align: center;
   margin: 15px;
 `;
@@ -24,6 +25,6 @@ export const StarshipInfoFields = styled.div`
   margin: auto;
   font-weight: bold;
   span {
-    color: #4bd5ee;
+    color: ${({ theme }) => theme.primaryHeading.fontColor};
   }
 `;

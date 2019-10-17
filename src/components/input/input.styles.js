@@ -8,14 +8,14 @@ export const GroupContainer = styled.div`
   }
 `;
 
-export const FormInputContainer = styled.input`
-  background: none;
-  background-color: white;  
+export const FormInputContainer = styled.input`  
+  background-color: ${({ theme }) => theme.inputs.background};  
+  color: ${({ theme }) => theme.inputs.fontColor};  
   font-size: 18px;
   padding: 10px 0px;
   width: 100%
   display: block; 
-  border: none;
+  border-color: ${({ theme }) => theme.inputs.borderColor};  
   border-radius: 4px; 
   margin: 25px auto; 
 `;

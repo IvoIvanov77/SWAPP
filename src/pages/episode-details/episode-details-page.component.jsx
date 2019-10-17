@@ -10,7 +10,6 @@ import {
   EpisodeDetailsContainer,
   EpisodeDescription,
   EpisodeDetailsFooterContainer,
-  EpisodeDirectorAndDate,
   CharactersContainer,
 } from './episode-details-page-styles';
 
@@ -37,12 +36,10 @@ const EpisodeDetaislPage = ({ episode }) => {
         <EpisodeDescription>{openingCrawl}</EpisodeDescription>
         <EpisodeDetailsFooterContainer>
           <p>
-            Director:{' '}
-            <EpisodeDirectorAndDate>{director}</EpisodeDirectorAndDate>
+            Director: <span>{director}</span>
           </p>
           <p>
-            Release Date:{' '}
-            <EpisodeDirectorAndDate>{releaseDate}</EpisodeDirectorAndDate>
+            Release Date: <span>{releaseDate}</span>
           </p>
         </EpisodeDetailsFooterContainer>
       </EpisodeDetailsContainer>
