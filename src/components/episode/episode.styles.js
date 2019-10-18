@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const EpisodeContainer = styled.div`
+export const EpisodeContainer = styled.div.attrs(props => ({
+  className: 'cartColors',
+}))`
   margin: 3%;
   width: 20%;
   border-radius: 10px;
-  border-color: ${({ theme }) => theme.cards.borderColor};
-  background-color: ${({ theme }) => theme.cards.background};
 `;
 
 export const ImageContainer = styled.img`
@@ -14,7 +14,6 @@ export const ImageContainer = styled.img`
 `;
 
 export const TitleContainer = styled.h2`
-  color: ${({ theme }) => theme.primaryHeading.fontColor};
   margin: 15px;
 `;
 

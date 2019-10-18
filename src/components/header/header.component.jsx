@@ -7,7 +7,7 @@ import {
   NavigationListItem,
 } from './header.styles';
 
-const Header = () => {
+const Header = ({ onClick }) => {
   return (
     <HeaderContainer>
       <LogoContainer>
@@ -24,6 +24,7 @@ const Header = () => {
       <NavigationListItem>
         <NavLink to="/login">Login</NavLink>
       </NavigationListItem>
+      <button onClick={onClick}>change theme</button>
     </HeaderContainer>
   );
 };

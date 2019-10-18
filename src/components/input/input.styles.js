@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const GroupContainer = styled.div`
   margin: 30px 0;
-
   input[type='password'] {
     letter-spacing: 0.3em;
   }

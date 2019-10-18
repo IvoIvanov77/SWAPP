@@ -5,7 +5,6 @@ import {
   CharacterImage,
   CharacterName,
   CharacterInfoFields,
-  FieldColor,
 } from './character-info.styles';
 
 const CharacterInfo = ({ person }) => {
@@ -17,14 +16,14 @@ const CharacterInfo = ({ person }) => {
       <CharacterImage src={image} alt={name}></CharacterImage>
       <CharacterInfoFields>
         <p>
-          Height: <FieldColor>{height}</FieldColor>
+          Height: <span>{height}</span>
         </p>
         <p>Weight:</p>
         <p>
-          Spices: <FieldColor>{species.name}</FieldColor>
+          Spices: <span>{species.name}</span>
         </p>
         <p>
-          Home World: <FieldColor>{homeworld.name}</FieldColor>
+          Home World: <span>{homeworld.name}</span>
         </p>
       </CharacterInfoFields>
     </CharacterInfoContainer>

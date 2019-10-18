@@ -1,11 +1,11 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import Header from './components/header/header.component';
+import { default as Header } from './components/header/header.container';
 import { default as EpisodesPage } from './pages/episodes/episodes-page.container';
 import { default as CharactersPage } from './pages/characters/characters-page.component';
 import { default as LoginPage } from './pages/login/login-page.container';
-import { default as EpisodeDetaislPage } from './pages/episode-details/episodes-details-page.container';
+import { default as EpisodeDetaislPage } from './pages/episode-details/episode-details-page.container';
 import { default as CharacterDetailsPage } from './pages/character-details/character-details-page.container';
 import { default as StarshipDetailsPage } from './pages/starship-details/starship-details-page.container';
 
@@ -14,7 +14,7 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <Route exact path="/" component={EpisodesPage} />
+        {/* <Route exact path="/" component={EpisodesPage} /> */}
         <Route exact path="/episodes" component={EpisodesPage} />
         <Route exact path="/episodes/:id" component={EpisodeDetaislPage} />
         <Route exact path="/characters" component={CharactersPage} />
@@ -25,17 +25,13 @@ function App() {
           component={StarshipDetailsPage}
         />
         <Route exact path="/login" component={LoginPage} />
-        {/* <Route
+        <Route
           exact
-          path='/signin'
+          path="/"
           render={() =>
-            this.props.currentUser ? (
-              <Redirect to='/' />
-            ) : (
-                <SignInAndSignUpPage />
-              )
+            true ? <Redirect to="/episodes" /> : <Redirect to="/login" />
           }
-        /> */}
+        />
       </Switch>
     </div>
   );

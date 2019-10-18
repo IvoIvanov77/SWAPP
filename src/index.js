@@ -8,10 +8,14 @@ import { ApolloClient } from 'apollo-client';
 import { setContext } from 'apollo-link-context';
 import { typeDefs, resolvers } from './graphql/resolvers';
 import { ThemeProvider } from 'styled-components';
-import './index.css';
+import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
+
+// import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { lightTheme, darkTheme } from './util/themes';
+import { GlobalStyle } from './GlobalStyles';
 
 const httpLink = createHttpLink({
   uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql',
@@ -27,15 +31,24 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-const currentTheme = () => {
-  const currentTheme = localStorage.getItem('theme');
-  if (currentTheme) {
-    return currentTheme === 'lightTheme' ? lightTheme : darkTheme;
+const GET_COLOR_THEME = gql`
+  {
+    colorTheme @client
   }
-  return lightTheme;
+`;
+
+const RenderProps = props => {
+  const {
+    data: { colorTheme },
+  } = useQuery(GET_COLOR_THEME);
+  const currentTheme = colorTheme === 'lightTheme' ? lightTheme : darkTheme;
+
+  return <ThemeProvider theme={currentTheme}>{props.children}</ThemeProvider>;
 };
 
 const cache = new InMemoryCache();
+
+console.log('call');
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
@@ -44,12 +57,21 @@ const client = new ApolloClient({
   resolvers,
 });
 
+const storedColorTheme = localStorage.getItem('colorTheme');
+
+client.writeData({
+  data: {
+    colorTheme: storedColorTheme ? storedColorTheme : 'lightTheme',
+  },
+});
+
 ReactDOM.render(
   <ApolloProvider client={client}>
     <BrowserRouter>
-      <ThemeProvider theme={currentTheme}>
+      <RenderProps>
         <App />
-      </ThemeProvider>
+        <GlobalStyle />
+      </RenderProps>
     </BrowserRouter>
   </ApolloProvider>,
   document.getElementById('root'),

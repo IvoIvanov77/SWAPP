@@ -5,7 +5,6 @@ import {
   StarshipContainer,
   StarshipImage,
   StarshipNameContainer,
-  StarshipName,
 } from './starship.styles';
 
 const Starchip = ({ image, name, linkUrl }) => {
@@ -14,7 +13,7 @@ const Starchip = ({ image, name, linkUrl }) => {
       <StarshipContainer>
         <StarshipImage src={image} alt={name}></StarshipImage>
         <StarshipNameContainer>
-          <StarshipName>{name}</StarshipName>
+          <h2>{name}</h2>
         </StarshipNameContainer>
       </StarshipContainer>
     </Link>

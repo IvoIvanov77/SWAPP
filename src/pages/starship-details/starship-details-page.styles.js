@@ -8,7 +8,7 @@ export const DetailsPageContainer = styled.div`
 export const StarshipName = styled.h1`
   font-weight: bold;
   text-align: center;
-  color: #4bd5ee;
+  color: ${({ theme }) => theme.primaryHeading.fontColor};
 `;
 
 export const FlexContainer = styled.div`

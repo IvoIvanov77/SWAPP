@@ -6,12 +6,11 @@ import {
   HeaderContainer,
   EpisodeImage,
   EpisodeTitleContainer,
-  EpisodeId,
   EpisodeDetailsContainer,
   EpisodeDescription,
   EpisodeDetailsFooterContainer,
   CharactersContainer,
-} from './episode-details-page-styles';
+} from './episode-details-page.styles';
 
 const EpisodeDetaislPage = ({ episode }) => {
   const {
@@ -28,8 +27,8 @@ const EpisodeDetaislPage = ({ episode }) => {
       <HeaderContainer>
         <EpisodeImage src={image} alt={title}></EpisodeImage>
         <EpisodeTitleContainer>
-          <EpisodeId>Star Wars: Episode {episodeId}</EpisodeId>
-          <h2>{title}</h2>
+          <h2>Star Wars: Episode {episodeId}</h2>
+          <p>{title}</p>
         </EpisodeTitleContainer>
       </HeaderContainer>
       <EpisodeDetailsContainer>

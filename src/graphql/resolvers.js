@@ -1,5 +1,7 @@
 import { gql } from 'apollo-boost';
 
+// import { lightTheme, darkTheme } from '../util/themes';
+
 export const typeDefs = gql`
   extend type Mutation {
     ToggleColorTheme: String!
@@ -14,7 +16,7 @@ const GET_COLOR_THEME = gql`
 
 export const resolvers = {
   Mutation: {
-    toggleLightTheme: (_root, _args, { cache }) => {
+    toggleColorTheme: (_root, _args, { cache }) => {
       const { colorTheme } = cache.readQuery({
         query: GET_COLOR_THEME,
       });
@@ -25,8 +27,8 @@ export const resolvers = {
         query: GET_COLOR_THEME,
         data: { colorTheme: toggledTheme },
       });
-
-      return !toggledTheme;
+      localStorage.setItem('colorTheme', toggledTheme);
+      return toggledTheme;
     },
   },
 };

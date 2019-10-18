@@ -8,7 +8,7 @@ export const HeaderContainer = styled.ul`
   background-color: ${({ theme }) => theme.appBar.background};
 `;
 
-export const LogoContainer = styled.ul`
+export const LogoContainer = styled.li`
   float: left;
   a {
     display: block;
