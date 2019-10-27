@@ -12,6 +12,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { GlobalStyle } from './GlobalStyles';
 import ApplicationThemeProvider from './ApplicationThemeProvider';
+import './fonts/fonts.css';
 
 const httpLink = createHttpLink({
   uri: 'https://swapp.st6.io/graphql',

@@ -14,7 +14,9 @@ export const StarshipImage = styled.img`
   margin: 0 auto;
 `;
 
-export const StarshipName = styled.h2`
+export const StarshipName = styled.h2.attrs(props => ({
+  className: 'starWarsFont',
+}))`
   text-align: center;
   margin: 15px;
 `;

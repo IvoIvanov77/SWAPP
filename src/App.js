@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { default as Header } from './components/header/header.container';
+import Header from './components/header/header.component';
 import { default as EpisodesPage } from './pages/episodes/episodes-page.container';
 import { default as CharactersPage } from './pages/characters/characters-page.component';
 import { default as LoginPage } from './pages/login/login-page.container';

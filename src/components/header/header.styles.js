@@ -8,17 +8,15 @@ export const HeaderContainer = styled.ul`
   background-color: ${({ theme }) => theme.appBar.background};
 `;
 
-export const LogoContainer = styled.li`
+export const LogoContainer = styled.li.attrs(props => ({
+  className: 'starWarsFont',
+}))`
   float: left;
-  a {
-    display: block;
-    color: #ffe300;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  span {
-  }
+  display: block;
+  color: #ffe300;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 30px;
 `;
 
 export const NavigationListItem = styled.li`

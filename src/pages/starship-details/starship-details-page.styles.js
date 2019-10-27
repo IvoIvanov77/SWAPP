@@ -5,10 +5,15 @@ export const DetailsPageContainer = styled.div`
   margin: 50px auto;
 `;
 
-export const StarshipName = styled.h1`
-  font-weight: bold;
+export const StarshipName = styled.h1.attrs(props => ({
+  className: 'starWarsFont',
+}))`
   text-align: center;
   color: ${({ theme }) => theme.primaryHeading.fontColor};
+`;
+
+export const StarshipModel = styled.h2`
+  text-align: center;
 `;
 
 export const FlexContainer = styled.div`

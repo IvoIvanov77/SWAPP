@@ -6,7 +6,9 @@ export const LoginPageContainer = styled.div`
   margin: 10% 20%;
 `;
 
-export const LoginPageTitleContainer = styled.div`
+export const LoginPageTitleContainer = styled.div.attrs(props => ({
+  className: 'starWarsFont',
+}))`
   font-size: 100px;
   color: #ffe300;
   text-align: center;

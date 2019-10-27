@@ -5,4 +5,7 @@ export const CharactersListContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin: 50px;
+  @media (max-width: 1200px) {
+    margin: 0;
+  }
 `;

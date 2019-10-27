@@ -13,7 +13,7 @@ const Starchip = ({ image, name, linkUrl }) => {
       <StarshipContainer>
         <StarshipImage src={image} alt={name}></StarshipImage>
         <StarshipNameContainer>
-          <h2>{name}</h2>
+          <h3>{name}</h3>
         </StarshipNameContainer>
       </StarshipContainer>
     </Link>

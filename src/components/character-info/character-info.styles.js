@@ -14,7 +14,9 @@ export const CharacterImage = styled.img`
   margin: 0 auto;
 `;
 
-export const CharacterName = styled.h2`
+export const CharacterName = styled.h2.attrs(props => ({
+  className: 'starWarsFont',
+}))`
   text-align: center;
   margin: 15px;
 `;

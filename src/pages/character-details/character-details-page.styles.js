@@ -5,7 +5,9 @@ export const DetailsPageContainer = styled.div`
   margin: 50px auto;
 `;
 
-export const CharacterName = styled.h1`
+export const CharacterName = styled.h1.attrs(props => ({
+  className: 'starWarsFont',
+}))`
   font-weight: bold;
   text-align: center;
   color: ${({ theme }) => theme.primaryHeading.fontColor};
@@ -13,13 +15,20 @@ export const CharacterName = styled.h1`
 
 export const FlexContainer = styled.div`
   display: flex;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const LeftContainer = styled.div`
   width: 90%;
 `;
 
-export const RightContainer = styled.div`
+export const RightContainer = styled.div.attrs(props => ({
+  className: 'starWarsFont',
+}))`
   width: 90%;
   h2 {
     text-align: center;

@@ -4,6 +4,7 @@ import StarshipInfo from '../../components/starship-info/starship-info.component
 import {
   DetailsPageContainer,
   StarshipName,
+  StarshipModel,
   FlexContainer,
   LeftContainer,
   RightContainer,
@@ -14,7 +15,7 @@ const StarshipDetailsPage = ({ starship }) => {
   return (
     <DetailsPageContainer>
       <StarshipName>{name}</StarshipName>
-      <h1>{model}</h1>
+      <StarshipModel>({model})</StarshipModel>
       <hr />
       <FlexContainer>
         <LeftContainer>

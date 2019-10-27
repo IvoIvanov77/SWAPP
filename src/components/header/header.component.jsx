@@ -1,19 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import ChangeTheme from '../../util/changeTheme';
 import {
   HeaderContainer,
   LogoContainer,
   NavigationListItem,
 } from './header.styles';
 
-const Header = ({ onClick }) => {
+const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <NavLink to="/">
-          <span>SWAPP</span>
-        </NavLink>
+        <ChangeTheme>swap</ChangeTheme>
       </LogoContainer>
       <NavigationListItem>
         <NavLink to="/episodes">Episodes</NavLink>
@@ -24,7 +23,6 @@ const Header = ({ onClick }) => {
       <NavigationListItem>
         <NavLink to="/login">Login</NavLink>
       </NavigationListItem>
-      <button onClick={onClick}>change theme</button>
     </HeaderContainer>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 
 import FormInput from '../../components/input/input.component';
 import CustomButton from '../../components/button/button.component';
+import ChangeTheme from '../../util/changeTheme';
 import {
   LoginPageContainer,
   LoginPageTitleContainer,
@@ -35,7 +36,9 @@ class LoginPage extends React.Component {
   render() {
     return (
       <LoginPageContainer>
-        <LoginPageTitleContainer>swapp</LoginPageTitleContainer>
+        <LoginPageTitleContainer>
+          <ChangeTheme>swapp</ChangeTheme>
+        </LoginPageTitleContainer>
         <LoginFormContainer onSubmit={this.handleSubmit}>
           <FormInputsContainer>
             <FormInput
