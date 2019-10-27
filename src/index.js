@@ -14,7 +14,7 @@ import { GlobalStyle } from './GlobalStyles';
 import ApplicationThemeProvider from './ApplicationThemeProvider';
 
 const httpLink = createHttpLink({
-  uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql',
+  uri: 'https://swapp.st6.io/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
