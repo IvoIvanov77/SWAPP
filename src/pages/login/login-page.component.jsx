@@ -8,6 +8,7 @@ import {
   LoginPageTitleContainer,
   LoginFormContainer,
   FormInputsContainer,
+  FormButtonContainer,
 } from './login-page.styles';
 
 class LoginPage extends React.Component {
@@ -57,9 +58,9 @@ class LoginPage extends React.Component {
               label="password"
               required
             />
-            <div className="buttons">
+            <FormButtonContainer>
               <CustomButton type="submit">Login</CustomButton>
-            </div>
+            </FormButtonContainer>
           </FormInputsContainer>
         </LoginFormContainer>
       </LoginPageContainer>

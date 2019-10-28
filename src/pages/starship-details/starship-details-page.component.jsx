@@ -1,6 +1,7 @@
 import React from 'react';
 
 import StarshipInfo from '../../components/starship-info/starship-info.component';
+import RadarChart from '../../components/redar-chart/radar-chart.component';
 import {
   DetailsPageContainer,
   StarshipName,
@@ -21,7 +22,9 @@ const StarshipDetailsPage = ({ starship }) => {
         <LeftContainer>
           <StarshipInfo starship={starship} />
         </LeftContainer>
-        <RightContainer></RightContainer>
+        <RightContainer>
+          <RadarChart></RadarChart>
+        </RightContainer>
       </FlexContainer>
     </DetailsPageContainer>
   );

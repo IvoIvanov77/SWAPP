@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const DetailsPageContainer = styled.div`
   width: 80%;
   margin: 50px auto;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export const CharacterName = styled.h1.attrs(props => ({

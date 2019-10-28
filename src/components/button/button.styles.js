@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
   min-width: 165px;
-  margin-left: auto;
   width: auto;
   border-color: ${({ theme }) => theme.solidButtons.borderColor};
   color: ${({ theme }) => theme.solidButtons.fontColor};

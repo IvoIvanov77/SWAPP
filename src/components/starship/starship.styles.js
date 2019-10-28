@@ -20,4 +20,7 @@ export const StarshipNameContainer = styled.div`
   top: 50%;
   left: 30%;
   transform: translateY(-50%);
+  @media (max-width: 480px) {
+    left: 40%;
+  }
 `;
