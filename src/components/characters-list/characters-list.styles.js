@@ -9,3 +9,8 @@ export const CharactersListContainer = styled.div`
     margin: 0;
   }
 `;
+
+export const FetchMoreButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;

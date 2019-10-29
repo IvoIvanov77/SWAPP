@@ -1,5 +1,5 @@
 import React from 'react';
-// import ChatactersPage from '../characters/characters-page.component';
+import ChatactersList from '../../components/characters-list/characters-list.component';
 
 import {
   DetailsPageContainer,
@@ -12,14 +12,18 @@ import {
   CharactersContainer,
 } from './episode-details-page.styles';
 
-const EpisodeDetaislPage = ({ episode }) => {
+const EpisodeDetaislPage = ({
+  episode,
+  characters,
+  fetchMore,
+  hasNextPage,
+}) => {
   const {
     title,
     openingCrawl,
     image,
     director,
     releaseDate,
-    // people,
     episodeId,
   } = episode;
   return (
@@ -45,7 +49,13 @@ const EpisodeDetaislPage = ({ episode }) => {
       {/* <div>
         <ChatactersPage characters={people} />
       </div> */}
-      <CharactersContainer>characters</CharactersContainer>
+      <CharactersContainer>
+        <ChatactersList
+          characters={characters}
+          hasNextPage={hasNextPage}
+          fetchMore={fetchMore}
+        />
+      </CharactersContainer>
     </DetailsPageContainer>
   );
 };
