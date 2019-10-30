@@ -13,6 +13,7 @@ const GET_STARSHIP_BY_ID = gql`
       starshipClass
       cost
       maxAtmosphericSpeed
+      maxMLPerHour
       hyperdriveRating
       crew
     }

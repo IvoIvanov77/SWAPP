@@ -9,12 +9,14 @@ import { default as EpisodeDetaislPage } from './pages/episode-details/episode-d
 import { default as CharacterDetailsPage } from './pages/character-details/character-details-page.container';
 import { default as StarshipDetailsPage } from './pages/starship-details/starship-details-page.container';
 
+import { default as AllStarships } from './components/all-starships/all-starships.container';
+
 function App() {
   return (
     <div>
       <Header />
       <Switch>
-        {/* <Route exact path="/" component={EpisodesPage} /> */}
+        <Route exact path="/allstars" component={AllStarships} />
         <Route exact path="/episodes" component={EpisodesPage} />
         <Route exact path="/episodes/:id" component={EpisodeDetaislPage} />
         <Route exact path="/characters" component={CharactersPage} />

@@ -9,16 +9,18 @@ import {
 
 const ChatactersList = ({ characters, fetchMore, hasNextPage }) => {
   return (
-    <CharactersListContainer>
-      {characters.map(({ id, ...otherProps }) => (
-        <Character key={id} linkUrl={id} {...otherProps} />
-      ))}
+    <>
+      <CharactersListContainer>
+        {characters.map(({ id, ...otherProps }) => (
+          <Character key={id} linkUrl={id} {...otherProps} />
+        ))}
+      </CharactersListContainer>
       {hasNextPage ? (
         <FetchMoreButtonContainer>
           <CustomButton onClick={fetchMore}>Load More</CustomButton>
         </FetchMoreButtonContainer>
       ) : null}
-    </CharactersListContainer>
+    </>
   );
 };
 

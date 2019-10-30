@@ -33,7 +33,7 @@ const GET_EPISODE_BY_ID = gql`
 
 const EpisodeDetailsContainer = ({ match }) => {
   const { loading, error, data, fetchMore } = useQuery(GET_EPISODE_BY_ID, {
-    variables: { id: match.params.id, first: 5 },
+    variables: { id: match.params.id, first: 6 },
   });
 
   if (loading) {
@@ -44,7 +44,6 @@ const EpisodeDetailsContainer = ({ match }) => {
   }
 
   const { episode } = data;
-  console.log(data);
   const {
     people: {
       edges,
@@ -62,16 +61,16 @@ const EpisodeDetailsContainer = ({ match }) => {
         if (!episode.people.edges.length) {
           return prev;
         }
-        // console.log(prev.episode)
-        return {
+        const data = {
           episode: {
             ...episode,
-          },
-          people: {
-            ...episode.people,
-            edges: [...prev.episode.people.edges, episode.people.edges],
+            people: {
+              ...episode.people,
+              edges: [...prev.episode.people.edges, ...episode.people.edges],
+            },
           },
         };
+        return data;
       },
     });
   };

@@ -6,7 +6,7 @@ export const CharacterContainer = styled.div.attrs(props => ({
   border-radius: 10px;
   display: flex;
   position: relative;
-  margin: 20px;
+  margin: 20px 0;
   width: 30%;
   @media (max-width: 1200px) {
     width: 40%;

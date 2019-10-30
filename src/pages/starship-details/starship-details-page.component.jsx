@@ -1,7 +1,7 @@
 import React from 'react';
 
 import StarshipInfo from '../../components/starship-info/starship-info.component';
-import RadarChart from '../../components/redar-chart/radar-chart.component';
+import { default as RadarChart } from '../../components/redar-chart/radar-chart.container';
 import {
   DetailsPageContainer,
   StarshipName,
@@ -23,7 +23,7 @@ const StarshipDetailsPage = ({ starship }) => {
           <StarshipInfo starship={starship} />
         </LeftContainer>
         <RightContainer>
-          <RadarChart></RadarChart>
+          <RadarChart starship={starship}></RadarChart>
         </RightContainer>
       </FlexContainer>
     </DetailsPageContainer>

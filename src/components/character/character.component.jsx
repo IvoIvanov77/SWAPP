@@ -7,9 +7,9 @@ import {
   CharacterNameContainer,
 } from './character.styles';
 
-const Character = ({ image, name, history, linkUrl, match }) => {
+const Character = ({ image, name, history, linkUrl }) => {
   return (
-    <CharacterContainer onClick={() => history.push(`${match.url}/${linkUrl}`)}>
+    <CharacterContainer onClick={() => history.push(`/characters/${linkUrl}`)}>
       <CharacterImage src={image} alt={name}></CharacterImage>
       <CharacterNameContainer>
         <h2>{name}</h2>

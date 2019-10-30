@@ -3,7 +3,7 @@ import Radar from 'react-d3-radar';
 
 import { ChartContainer, TitleContainer } from './radar-chart.styles';
 
-const RadarChart = () => {
+const RadarChart = ({ statistic }) => {
   return (
     <>
       <TitleContainer>Compared to Strarship Class Max</TitleContainer>
@@ -23,23 +23,17 @@ const RadarChart = () => {
           }}
           data={{
             variables: [
-              { key: 'resilience', label: 'Max Atm. Speed' },
-              { key: 'strength', label: 'Max ML/h' },
-              { key: 'adaptability', label: 'HyperD Rat.' },
-              { key: 'creativity', label: 'Crew' },
-              { key: 'openness', label: 'Cost' },
+              { key: 'maxAtmosphericSpeed', label: 'Max Atm. Speed' },
+              { key: 'maxMLPerHour', label: 'Max ML/h' },
+              { key: 'hyperdriveRating', label: 'HyperD Rat.' },
+              { key: 'crew', label: 'Crew' },
+              { key: 'cost', label: 'Cost' },
             ],
             sets: [
               {
-                key: 'me',
-                label: 'My Scores',
-                values: {
-                  resilience: 4,
-                  strength: 6,
-                  adaptability: 7,
-                  creativity: 2,
-                  openness: 8,
-                },
+                key: 'starship',
+                label: 'Starship Scores',
+                values: statistic,
               },
             ],
           }}
