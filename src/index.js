@@ -6,6 +6,7 @@ import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloClient } from 'apollo-client';
 import { setContext } from 'apollo-link-context';
+import { onError } from 'apollo-link-error';
 import { typeDefs, resolvers } from './graphql/resolvers';
 
 import App from './App';
@@ -28,10 +29,22 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  if (graphQLErrors) {
+    localStorage.clear();
+    //  graphQLErrors.map(({ message, locations, path }) =>
+    //   console.log(
+    //     `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
+    //   ),
+    // );
+  }
+  if (networkError) console.log(`[Network error]: ${networkError}`);
+});
+
 const cache = new InMemoryCache();
 
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: authLink.concat(errorLink).concat(httpLink),
   cache,
   typeDefs,
   resolvers,
@@ -42,6 +55,7 @@ const storedColorTheme = localStorage.getItem('colorTheme');
 client.writeData({
   data: {
     colorTheme: storedColorTheme ? storedColorTheme : 'lightTheme',
+    authenticated: !!localStorage.getItem('token'),
   },
 });
 
