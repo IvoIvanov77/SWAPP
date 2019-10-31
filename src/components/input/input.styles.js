@@ -18,3 +18,5 @@ export const FormInputContainer = styled.input`
   border-radius: 4px; 
   margin: 25px auto; 
 `;
+
+FormInputContainer.displayName = 'FormInputContainer';

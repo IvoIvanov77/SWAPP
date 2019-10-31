@@ -17,11 +17,15 @@ export const CharacterContainer = styled.div.attrs(props => ({
   }
 `;
 
+CharacterContainer.displayName = 'CharacterContainer';
+
 export const CharacterImage = styled.img`
   width: 100px;
   border-radius: 10px 0px 0px 10px;
   position: relative;
 `;
+
+CharacterImage.displayName = 'CharacterImage';
 
 export const CharacterNameContainer = styled.div.attrs(props => ({
   className: 'starWarsFont',
