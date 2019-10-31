@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from '../components/header/header.component';
 import { default as EpisodesPage } from './episodes/episodes-page.container';
@@ -14,7 +14,7 @@ function Pages() {
     <div>
       <Header />
       <Switch>
-        {/* <Route exact path="/allstars" component={AllStarships} /> */}
+        <Route exact path="/" render={() => <Redirect to="/episodes" />} />
         <Route exact path="/episodes" component={EpisodesPage} />
         <Route exact path="/episodes/:id" component={EpisodeDetaislPage} />
         <Route exact path="/characters" component={CharactersPage} />

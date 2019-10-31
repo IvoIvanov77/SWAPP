@@ -18,7 +18,6 @@ function App() {
     data: { authenticated },
   } = useQuery(IS_AUTHENTICATED);
   console.log(authenticated);
-
   return <>{authenticated ? <Pages /> : <LoginPage />}</>;
 }
 

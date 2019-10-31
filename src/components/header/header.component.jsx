@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import ChangeTheme from '../../util/changeTheme';
+import LogoutButton from '../logout/logout-button.component';
 import {
   HeaderContainer,
   LogoContainer,
@@ -15,14 +16,18 @@ const Header = () => {
         <ChangeTheme>swap</ChangeTheme>
       </LogoContainer>
       <NavigationListItem>
+        <LogoutButton />
+      </NavigationListItem>
+      <NavigationListItem>
         <NavLink to="/episodes">Episodes</NavLink>
       </NavigationListItem>
       <NavigationListItem>
         <NavLink to="/characters">Characters</NavLink>
       </NavigationListItem>
-      <NavigationListItem>
+
+      {/* <NavigationListItem>
         <NavLink to="/login">Login</NavLink>
-      </NavigationListItem>
+      </NavigationListItem> */}
     </HeaderContainer>
   );
 };

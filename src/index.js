@@ -31,12 +31,11 @@ const authLink = setContext((_, { headers }) => {
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
-    localStorage.clear();
-    //  graphQLErrors.map(({ message, locations, path }) =>
-    //   console.log(
-    //     `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
-    //   ),
-    // );
+    graphQLErrors.map(({ message, locations, path }) =>
+      console.log(
+        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
+      ),
+    );
   }
   if (networkError) console.log(`[Network error]: ${networkError}`);
 });
@@ -55,6 +54,7 @@ const storedColorTheme = localStorage.getItem('colorTheme');
 client.writeData({
   data: {
     colorTheme: storedColorTheme ? storedColorTheme : 'lightTheme',
+    isSessionExpired: false,
     authenticated: !!localStorage.getItem('token'),
   },
 });
