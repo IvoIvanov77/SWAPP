@@ -3,6 +3,7 @@ import { gql } from 'apollo-boost';
 import { useMutation, useApolloClient } from '@apollo/react-hooks';
 
 import LoginPage from './login-page.component';
+import ProcessError from '../../components/error/error.component';
 
 const SIGNIN_USER = gql`
   mutation SignIn($email: String!, $password: String!) {
@@ -19,8 +20,7 @@ const LoginPageContainer = () => {
     return <h1>Loading...............</h1>;
   }
   if (error) {
-    console.log(error);
-    return <h1>Error page</h1>;
+    return <ProcessError error={error} />;
   }
   if (data) {
     const token = data.signIn.token;
