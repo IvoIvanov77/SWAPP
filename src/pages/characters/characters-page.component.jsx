@@ -6,7 +6,7 @@ import { CharactersPageContainer } from './characters-page.styles';
 const CharactersPage = () => {
   return (
     <CharactersPageContainer>
-      <CharacterListContainer initialCount={12} />;
+      <CharacterListContainer initialCount={12} />
     </CharactersPageContainer>
   );
 };

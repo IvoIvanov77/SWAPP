@@ -1,7 +1,7 @@
 import React from 'react';
 
 import StarshipInfo from '../../components/starship-info/starship-info.component';
-import { default as RadarChart } from '../../components/redar-chart/radar-chart.container';
+import { default as RadarChart } from '../../components/radar-chart/radar-chart.container';
 import {
   DetailsPageContainer,
   StarshipName,

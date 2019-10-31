@@ -3,6 +3,8 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 import EpisodesPage from './episodes-page.component';
+import Spinner from '../../components/spinner/spinner.component';
+import ProcessError from '../../components/error/error.component';
 
 const GET_EPISODES = gql`
   query {
@@ -22,12 +24,11 @@ const GET_EPISODES = gql`
 
 const EpisodesContainer = () => {
   const { loading, error, data } = useQuery(GET_EPISODES);
-
   if (loading) {
-    return <h1>Loading.......</h1>;
+    return <Spinner />;
   }
   if (error) {
-    return <h1>Error page</h1>;
+    return <ProcessError error={error} />;
   }
   if (data) {
     const edges = data.allEpisodes.edges;

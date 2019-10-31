@@ -4,6 +4,7 @@ import { useMutation, useApolloClient } from '@apollo/react-hooks';
 
 import LoginPage from './login-page.component';
 import ProcessError from '../../components/error/error.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 const SIGNIN_USER = gql`
   mutation SignIn($email: String!, $password: String!) {
@@ -13,13 +14,17 @@ const SIGNIN_USER = gql`
   }
 `;
 
-const LoginPageContainer = () => {
+const LoginPageContainer = ({ errorMessage }) => {
   const [signIn, { loading, error, data }] = useMutation(SIGNIN_USER);
+
   const client = useApolloClient();
+
   if (loading) {
-    return <h1>Loading...............</h1>;
+    return <Spinner />;
   }
   if (error) {
+    localStorage.removeItem('token');
+    client.writeData({ data: { authenticated: false } });
     return <ProcessError error={error} />;
   }
   if (data) {
@@ -30,6 +35,7 @@ const LoginPageContainer = () => {
   return (
     <LoginPage
       signin={(email, password) => signIn({ variables: { email, password } })}
+      errorMessage={errorMessage}
     />
   );
 };

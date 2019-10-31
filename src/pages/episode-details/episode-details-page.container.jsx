@@ -3,6 +3,8 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 import EpisodeDetaislPage from './episode-details-page.component';
+import Spinner from '../../components/spinner/spinner.component';
+import ProcessError from '../../components/error/error.component';
 
 const GET_EPISODE_BY_ID = gql`
   query Episode($id: ID!, $first: Int!, $after: String) {
@@ -37,10 +39,10 @@ const EpisodeDetailsContainer = ({ match }) => {
   });
 
   if (loading) {
-    return <h1>Loading.......</h1>;
+    return <Spinner />;
   }
   if (error) {
-    return <h1>Error page</h1>;
+    return <ProcessError error={error} />;
   }
 
   const { episode } = data;

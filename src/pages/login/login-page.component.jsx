@@ -35,11 +35,13 @@ class LoginPage extends React.Component {
   };
 
   render() {
+    const { errorMessage } = this.props;
     return (
       <LoginPageContainer>
         <LoginPageTitleContainer>
           <ChangeTheme>swapp</ChangeTheme>
         </LoginPageTitleContainer>
+        <h2>{errorMessage}</h2>
         <LoginFormContainer onSubmit={this.handleSubmit}>
           <FormInputsContainer>
             <FormInput

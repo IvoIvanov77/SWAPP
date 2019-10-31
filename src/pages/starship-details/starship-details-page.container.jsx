@@ -3,6 +3,8 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 import StarshipDetailsPage from './starship-details-page.component';
+import Spinner from '../../components/spinner/spinner.component';
+import ProcessError from '../../components/error/error.component';
 
 const GET_STARSHIP_BY_ID = gql`
   query Starship($id: ID!) {
@@ -26,10 +28,10 @@ const StarshipDetailsPageContainer = ({ match }) => {
   });
 
   if (loading) {
-    return <h1>Loading.......</h1>;
+    return <Spinner />;
   }
   if (error) {
-    return <h1>Error page</h1>;
+    return <ProcessError error={error} />;
   }
   if (data) {
     const { starship } = data;

@@ -7,6 +7,8 @@ import {
   getStarshipStatistic,
 } from '../../util/starshipStatistic';
 import RadarChart from './radar-chart.component';
+import Spinner from '../spinner/spinner.component';
+import ProcessError from '../error/error.component';
 
 const ALL_STARSHIPS = gql`
   query AllStarships($class: String) {
@@ -36,10 +38,10 @@ const RadarChartContainer = ({ starship }) => {
   });
 
   if (loading) {
-    return <h1>Loading.......</h1>;
+    return <Spinner />;
   }
   if (error) {
-    return <h1>Error page</h1>;
+    return <ProcessError error={error} />;
   }
   if (data) {
     const edges = data.allStarships.edges;

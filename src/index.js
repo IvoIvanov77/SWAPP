@@ -56,6 +56,7 @@ client.writeData({
     colorTheme: storedColorTheme ? storedColorTheme : 'lightTheme',
     isSessionExpired: false,
     authenticated: !!localStorage.getItem('token'),
+    errorMessage: '',
   },
 });
 

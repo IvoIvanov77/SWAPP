@@ -3,6 +3,8 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 import CharactersList from './characters-list.component';
+import ProcessError from '../error/error.component';
+import Spinner from '../spinner/spinner.component';
 
 const GET_CHARACTERS = gql`
   query AllPeople($first: Int!, $after: String) {
@@ -29,10 +31,10 @@ const CharactersListContainer = ({ initialCount }) => {
   let characters = [];
 
   if (loading) {
-    return <h1>Loading .....</h1>;
+    return <Spinner />;
   }
   if (error) {
-    return <h1>Error page</h1>;
+    return <ProcessError error={error} />;
   }
   const {
     allPeople: {
