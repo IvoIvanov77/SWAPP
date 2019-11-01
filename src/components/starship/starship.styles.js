@@ -15,6 +15,8 @@ export const StarshipImage = styled.img`
   position: relative;
 `;
 
+StarshipImage.displayName = 'StarshipImage';
+
 export const StarshipNameContainer = styled.div`
   position: absolute;
   top: 50%;
@@ -24,3 +26,5 @@ export const StarshipNameContainer = styled.div`
     left: 40%;
   }
 `;
+
+StarshipNameContainer.displayName = 'StarshipNameContainer';

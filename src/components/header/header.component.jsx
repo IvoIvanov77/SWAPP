@@ -24,10 +24,6 @@ const Header = () => {
       <NavigationListItem>
         <NavLink to="/characters">Characters</NavLink>
       </NavigationListItem>
-
-      {/* <NavigationListItem>
-        <NavLink to="/login">Login</NavLink>
-      </NavigationListItem> */}
     </HeaderContainer>
   );
 };

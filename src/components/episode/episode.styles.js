@@ -16,10 +16,14 @@ export const EpisodeContainer = styled.div.attrs(props => ({
   }
 `;
 
+EpisodeContainer.displayName = 'EpisodeContainer';
+
 export const ImageContainer = styled.img`
    width: 100%
    border-radius: 10px 10px 0 0;  
 `;
+
+ImageContainer.displayName = 'ImageContainer';
 
 export const TitleContainer = styled.h2.attrs(props => ({
   className: 'starWarsFont',
@@ -27,6 +31,10 @@ export const TitleContainer = styled.h2.attrs(props => ({
   margin: 15px;
 `;
 
+TitleContainer.displayName = 'TitleContainer';
+
 export const DescriptionContainer = styled.p`
   margin: 15px;
 `;
+
+DescriptionContainer.displayName = 'DescriptionContainer';
