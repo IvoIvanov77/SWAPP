@@ -20,30 +20,28 @@ describe('Charecter component', () => {
       history: mockHistory,
       linkUrl,
     };
-    wrapper = shallow(<Character {...mockProps} />);
+    wrapper = shallow(<Character.WrappedComponent {...mockProps} />);
   });
 
   it('should render Character component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // it('should call history.push with the right string when Character clicked', () => {
-  //   wrapper.find('CharacterContainer').simulate('click');
+  it('should call history.push with the right string when Character clicked', () => {
+    wrapper.find('CharacterContainer').simulate('click');
+    expect(mockHistory.push).toHaveBeenCalled();
+  });
 
-  //   expect(mockHistory.push).toHaveBeenCalled();
-  // });
+  it('should pass size to CharacterImage as the prop size', () => {
+    expect(wrapper.find('CharacterImage').prop('src')).toBe(image);
+  });
 
-  // it('should pass size to CharacterImage as the prop size', () => {
-  //   expect(wrapper.find('CharacterImage').prop('image')).toBe(image);
-  // });
-
-  // it('should pass imageUrl to BackgroundImageContainer as the prop imageUrl', () => {
-  //   expect(wrapper.find('BackgroundImageContainer').prop('imageUrl')).toBe(
-  //     imageUrl
-  //   );
-  // });
+  it('should pass imageUrl to BackgroundImageContainer as the prop imageUrl', () => {
+    expect(
+      wrapper
+        .find('h2')
+        .at(0)
+        .text(),
+    ).toBe(name);
+  });
 });
-
-// it('should render Character component', () => {
-//   expect(shallow(<Character />)).toMatchSnapshot();
-// });
