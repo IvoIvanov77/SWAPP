@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Charecter component should render Character component 1`] = `ShallowWrapper {}`;
-
-exports[`Charecter component should render MenuItem component 1`] = `undefined`;
-
-exports[`should render Character component 1`] = `ShallowWrapper {}`;

@@ -10,7 +10,11 @@ export const CharactersListContainer = styled.div`
   }
 `;
 
+CharactersListContainer.displayName = 'CharactersListContainer';
+
 export const FetchMoreButtonContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+FetchMoreButtonContainer.displayName = 'FetchMoreButtonContainer';
