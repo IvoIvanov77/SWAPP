@@ -8,6 +8,8 @@ export const DetailsPageContainer = styled.div`
   }
 `;
 
+DetailsPageContainer.displayName = 'DetailsPageContainer';
+
 export const CharacterName = styled.h1.attrs(props => ({
   className: 'starWarsFont',
 }))`
@@ -15,6 +17,8 @@ export const CharacterName = styled.h1.attrs(props => ({
   text-align: center;
   color: ${({ theme }) => theme.primaryHeading.fontColor};
 `;
+
+CharacterName.displayName = 'CharacterName';
 
 export const FlexContainer = styled.div`
   display: flex;

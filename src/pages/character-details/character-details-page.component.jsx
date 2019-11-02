@@ -12,7 +12,6 @@ import {
 
 const ChatacterDetaislPage = ({ person }) => {
   const { name, starships } = person;
-  const starshipsList = starships.edges.map(e => e.node);
   return (
     <DetailsPageContainer>
       <CharacterName>{name}</CharacterName>
@@ -24,7 +23,7 @@ const ChatacterDetaislPage = ({ person }) => {
         <RightContainer>
           <h2>Piloted Starships</h2>
           <hr />
-          <StarshipsList starships={starshipsList} />
+          <StarshipsList starships={starships} />
         </RightContainer>
       </FlexContainer>
     </DetailsPageContainer>
