@@ -14,13 +14,13 @@ const RadarChart = ({ statistic }) => {
           padding={70}
           domainMax={100}
           highlighted={null}
-          onHover={point => {
-            if (point) {
-              console.log('hovered over a data point');
-            } else {
-              console.log('not over anything');
-            }
-          }}
+          // onHover={point => {
+          //   if (point) {
+          //     console.log('hovered over a data point');
+          //   } else {
+          //     console.log('not over anything');
+          //   }
+          // }}
           data={{
             variables: [
               { key: 'maxAtmosphericSpeed', label: 'Max Atm. Speed' },

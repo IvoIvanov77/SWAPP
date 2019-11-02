@@ -13,14 +13,23 @@ export const getMaxValues = starshipList => {
 
 export const getStarshipStatistic = (starshipToCompare, maxValues) => {
   return {
-    cost: (starshipToCompare.cost / maxValues.cost) * 100,
-    crew: (starshipToCompare.crew / maxValues.crew) * 100,
-    hyperdriveRating:
-      (starshipToCompare.hyperdriveRating / maxValues.hyperdriveRating) * 100,
-    maxAtmosphericSpeed:
-      (starshipToCompare.maxAtmosphericSpeed / maxValues.maxAtmosphericSpeed) *
-      100,
-    maxMLPerHour:
-      (starshipToCompare.maxMLPerHour / maxValues.maxMLPerHour) * 100,
+    cost: calculatePercent(starshipToCompare.cost, maxValues.cost),
+    crew: calculatePercent(starshipToCompare.crew, maxValues.crew),
+    hyperdriveRating: calculatePercent(
+      starshipToCompare.hyperdriveRating,
+      maxValues.hyperdriveRating,
+    ),
+    maxAtmosphericSpeed: calculatePercent(
+      starshipToCompare.maxAtmosphericSpeed,
+      maxValues.maxAtmosphericSpeed,
+    ),
+    maxMLPerHour: calculatePercent(
+      starshipToCompare.maxMLPerHour,
+      maxValues.maxMLPerHour,
+    ),
   };
+};
+
+const calculatePercent = (valueToCompare, maxValue) => {
+  return valueToCompare ? (valueToCompare / maxValue) * 100 : 0;
 };

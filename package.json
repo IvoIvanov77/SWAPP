@@ -62,12 +62,14 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
+      "src/**/*.jsx",
+      "!src/**/*.container.*",
       "!src/index.js",
-      "!src/stories/**/*.js",
-      "!src/utils.js",
-      "!src/timers/**/*.js",
-      "!src/basic-mock/**/*.js"
+      "!src/stories/**",
+      "!src/pages/**",
+      "!src/util/**",
+      "!src/graphql/**",
+      "!src/fonts/**"
     ],
     "coverageThreshold": {
       "global": {
