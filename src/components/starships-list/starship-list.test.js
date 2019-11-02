@@ -2,10 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import StarshipList from './starships-list.component';
 
-it('should render StarshipList component', () => {
-  //   expect(shallow(<StarshipList />)).toMatchSnapshot();
-});
-
 describe('ChatactersList component', () => {
   let wrapper;
   const mockedStarships = [{ id: 1 }, { id: 2 }];

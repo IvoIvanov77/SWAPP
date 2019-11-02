@@ -18,7 +18,6 @@ describe('ChatacterDetaislPage component', () => {
   });
 
   it('should render ChatacterDetaislPage component', () => {
-    console.log(wrapper.debug());
     expect(wrapper).toMatchSnapshot();
   });
 
