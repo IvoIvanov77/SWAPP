@@ -51,4 +51,5 @@ const RadarChartContainer = ({ starship }) => {
     return <RadarChart statistic={statistic} />;
   }
 };
+
 export default RadarChartContainer;
