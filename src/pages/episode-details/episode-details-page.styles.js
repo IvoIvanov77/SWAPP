@@ -28,6 +28,8 @@ export const EpisodeImage = styled.img`
   }
 `;
 
+EpisodeImage.displayName = 'EpisodeImage';
+
 export const EpisodeTitleContainer = styled.div.attrs(props => ({
   className: 'starWarsFont',
 }))`
@@ -51,6 +53,8 @@ export const EpisodeTitleContainer = styled.div.attrs(props => ({
   }
 `;
 
+EpisodeTitleContainer.displayName = 'EpisodeTitleContainer';
+
 export const EpisodeDetailsContainer = styled.div.attrs(props => ({
   className: 'cartColors',
 }))`
@@ -59,13 +63,19 @@ export const EpisodeDetailsContainer = styled.div.attrs(props => ({
   padding: 30px 0;
 `;
 
+EpisodeDetailsContainer.displayName = 'EpisodeDetailsContainer';
+
 export const EpisodeDescription = styled.p`
   margin: 0 20px;
 `;
+
+EpisodeDescription.displayName = 'EpisodeDescription';
 
 export const EpisodeDetailsFooterContainer = styled.div`
   margin: 0 20px;
   font-weight: bold;
 `;
+
+EpisodeDetailsFooterContainer.displayName = 'EpisodeDetailsFooterContainer';
 
 export const CharactersContainer = styled.div``;

@@ -46,9 +46,6 @@ const EpisodeDetaislPage = ({
           </p>
         </EpisodeDetailsFooterContainer>
       </EpisodeDetailsContainer>
-      {/* <div>
-        <ChatactersPage characters={people} />
-      </div> */}
       <CharactersContainer>
         <ChatactersList
           characters={characters}
