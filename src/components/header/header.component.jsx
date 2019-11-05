@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import ChangeTheme from '../../util/changeTheme';
-import LogoutButton from '../logout/logout-button.component';
+import LogoutButton from '../logout/logout-button.container';
 import {
   HeaderContainer,
   LogoContainer,

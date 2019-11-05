@@ -7,3 +7,5 @@ export const EpisodesOverview = styled.div`
   width: 100%;
   margin: auto;
 `;
+
+EpisodesOverview.displayName = 'EpisodesOverview';

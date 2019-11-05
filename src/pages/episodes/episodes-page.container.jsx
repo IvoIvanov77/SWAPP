@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 import EpisodesPage from './episodes-page.component';
 import Spinner from '../../components/spinner/spinner.component';
-import ProcessError from '../../components/error/error.component';
+import ProcessError from '../../components/error/error.container';
 
 const GET_EPISODES = gql`
   query {

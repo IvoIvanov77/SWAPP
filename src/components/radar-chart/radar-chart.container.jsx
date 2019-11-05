@@ -8,7 +8,7 @@ import {
 } from '../../util/starshipStatistic';
 import RadarChart from './radar-chart.component';
 import Spinner from '../spinner/spinner.component';
-import ProcessError from '../error/error.component';
+import ProcessError from '../error/error.container';
 
 const ALL_STARSHIPS = gql`
   query AllStarships($class: String) {

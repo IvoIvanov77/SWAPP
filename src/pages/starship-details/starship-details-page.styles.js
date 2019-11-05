@@ -12,9 +12,13 @@ export const StarshipName = styled.h1.attrs(props => ({
   color: ${({ theme }) => theme.primaryHeading.fontColor};
 `;
 
+StarshipName.displayName = 'StarshipName';
+
 export const StarshipModel = styled.h2`
   text-align: center;
 `;
+
+StarshipModel.displayName = 'StarshipModel';
 
 export const FlexContainer = styled.div`
   display: flex;

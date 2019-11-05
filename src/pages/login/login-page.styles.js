@@ -26,6 +26,8 @@ export const LoginFormContainer = styled.div`
   background-color: #fff;
 `;
 
+LoginFormContainer.displayName = 'LoginFormContainer';
+
 export const FormInputsContainer = styled.form`
   margin: auto;
   padding: 20px;
