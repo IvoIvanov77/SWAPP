@@ -7,7 +7,6 @@ describe('LoginPage component', () => {
   let mockSignin;
   let preventDefault;
   let mockEvent;
-  // let mockState
   const mockErrorMessage = 'error';
 
   beforeEach(() => {
@@ -26,7 +25,6 @@ describe('LoginPage component', () => {
   });
 
   it('should render LoginPage component', () => {
-    console.log(wrapper.debug());
     expect(wrapper).toMatchSnapshot();
   });
 

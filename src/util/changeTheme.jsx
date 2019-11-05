@@ -10,7 +10,6 @@ const TOGGLE_COLOR_THEME = gql`
 
 const ChangeTheme = ({ children }) => {
   const [toggleColorTheme] = useMutation(TOGGLE_COLOR_THEME);
-
   return <div onClick={() => toggleColorTheme()}>{children}</div>;
 };
 

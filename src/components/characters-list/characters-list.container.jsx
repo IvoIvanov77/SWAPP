@@ -3,7 +3,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 import CharactersList from './characters-list.component';
-import ProcessError from '../error/error.component';
+import ProcessError from '../error/error.container';
 import Spinner from '../spinner/spinner.component';
 
 const GET_CHARACTERS = gql`

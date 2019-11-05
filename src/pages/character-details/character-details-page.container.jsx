@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 import CharacterDetaislPage from './character-details-page.component';
 import Spinner from '../../components/spinner/spinner.component';
-import ProcessError from '../../components/error/error.component';
+import ProcessError from '../../components/error/error.container';
 
 const GET_CHARACTER_BY_ID = gql`
   query Person($id: ID!) {
