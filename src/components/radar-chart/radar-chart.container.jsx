@@ -41,7 +41,7 @@ const RadarChartContainer = ({ starship }) => {
     return <Spinner />;
   }
   if (error) {
-    return <ProcessError error={error} />;
+    return <ProcessError />;
   }
   if (data) {
     const edges = data.allStarships.edges;

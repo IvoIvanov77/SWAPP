@@ -42,7 +42,7 @@ const EpisodeDetailsContainer = ({ match }) => {
     return <Spinner />;
   }
   if (error) {
-    return <ProcessError error={error} />;
+    return <ProcessError />;
   }
 
   const { episode } = data;

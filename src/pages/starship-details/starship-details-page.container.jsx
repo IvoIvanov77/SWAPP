@@ -31,7 +31,7 @@ const StarshipDetailsPageContainer = ({ match }) => {
     return <Spinner />;
   }
   if (error) {
-    return <ProcessError error={error} />;
+    return <ProcessError />;
   }
   if (data) {
     const { starship } = data;

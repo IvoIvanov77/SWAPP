@@ -28,7 +28,7 @@ const EpisodesContainer = () => {
     return <Spinner />;
   }
   if (error) {
-    return <ProcessError error={error} />;
+    return <ProcessError />;
   }
   if (data) {
     const edges = data.allEpisodes.edges;
