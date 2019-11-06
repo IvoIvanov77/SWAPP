@@ -4,6 +4,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 import { lightTheme, darkTheme } from './util/themes';
+import { COLOR_THEMES } from './util/constants';
 
 const GET_COLOR_THEME = gql`
   {
@@ -15,7 +16,8 @@ const AppicationThemeProvider = props => {
   const {
     data: { colorTheme },
   } = useQuery(GET_COLOR_THEME);
-  const currentTheme = colorTheme === 'lightTheme' ? lightTheme : darkTheme;
+  const currentTheme =
+    colorTheme === COLOR_THEMES.LIGHT_THEME ? lightTheme : darkTheme;
 
   return <ThemeProvider theme={currentTheme}>{props.children}</ThemeProvider>;
 };

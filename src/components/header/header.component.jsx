@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import ChangeTheme from '../../util/changeTheme';
+import ChangeTheme from '../change-theme/change-theme.container';
 import LogoutButton from '../logout/logout-button.container';
 import {
   HeaderContainer,
