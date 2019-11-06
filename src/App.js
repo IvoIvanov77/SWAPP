@@ -5,8 +5,6 @@ import { gql } from 'apollo-boost';
 import { default as LoginPage } from './pages/login/login-page.container';
 import Pages from './pages';
 
-// import { default as AllStarships } from './components/all-starships/all-starships.container';
-
 export const IS_AUTHENTICATED = gql`
   query IsAuthenticated {
     authenticated @client

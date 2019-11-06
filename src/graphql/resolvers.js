@@ -1,6 +1,6 @@
 import { gql } from 'apollo-boost';
 
-// import { lightTheme, darkTheme } from '../util/themes';
+import { COLOR_THEMES } from '../util/constants';
 
 export const typeDefs = gql`
   extend type Mutation {
@@ -33,10 +33,10 @@ export const resolvers = {
   },
 };
 
-//todo extract constants
 const getToggledColorTheme = currentTheme => {
-  if (currentTheme === 'lightTheme') {
-    return 'darkTheme';
+  const { LIGHT_THEME, DARK_THEME } = COLOR_THEMES;
+  if (currentTheme === LIGHT_THEME) {
+    return DARK_THEME;
   }
-  return 'lightTheme';
+  return LIGHT_THEME;
 };

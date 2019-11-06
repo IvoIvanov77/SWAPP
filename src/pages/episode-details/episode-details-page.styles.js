@@ -5,7 +5,6 @@ export const DetailsPageContainer = styled.div`
   margin: 50px auto;
 `;
 
-//TODO - rename
 export const HeaderContainer = styled.div.attrs(props => ({
   className: 'cartColors',
 }))`

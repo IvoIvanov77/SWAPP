@@ -43,3 +43,7 @@ export const FormButtonContainer = styled.div`
     justify-content: center;
   }
 `;
+
+export const ErrorMessage = styled.h3`
+  color: red;
+`;

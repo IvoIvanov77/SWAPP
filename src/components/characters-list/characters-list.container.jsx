@@ -34,7 +34,7 @@ const CharactersListContainer = ({ initialCount }) => {
     return <Spinner />;
   }
   if (error) {
-    return <ProcessError error={error} />;
+    return <ProcessError />;
   }
   const {
     allPeople: {

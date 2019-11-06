@@ -2,13 +2,14 @@ import React from 'react';
 
 import FormInput from '../../components/input/input.component';
 import CustomButton from '../../components/button/button.component';
-import ChangeTheme from '../../util/changeTheme';
+import ChangeTheme from '../../components/change-theme/change-theme.container';
 import {
   LoginPageContainer,
   LoginPageTitleContainer,
   LoginFormContainer,
   FormInputsContainer,
   FormButtonContainer,
+  ErrorMessage,
 } from './login-page.styles';
 
 class LoginPage extends React.Component {
@@ -41,9 +42,9 @@ class LoginPage extends React.Component {
         <LoginPageTitleContainer>
           <ChangeTheme>swapp</ChangeTheme>
         </LoginPageTitleContainer>
-        <h2>{errorMessage}</h2>
         <LoginFormContainer onSubmit={this.handleSubmit}>
           <FormInputsContainer>
+            <ErrorMessage>{errorMessage}</ErrorMessage>
             <FormInput
               name="email"
               type="email"
