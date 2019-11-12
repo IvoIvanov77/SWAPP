@@ -17,6 +17,9 @@ export const LogoContainer = styled.li.attrs(props => ({
   text-align: center;
   padding: 14px 16px;
   font-size: 30px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const NavigationListItem = styled.li`

@@ -8,12 +8,17 @@ export const CharacterContainer = styled.div.attrs(props => ({
   position: relative;
   margin: 20px 0;
   width: 30%;
-  @media (max-width: 1200px) {
-    width: 40%;
+
+  &:hover {
+    cursor: pointer;
   }
 
   @media (max-width: 1200px) {
-    width: 90%;
+    width: 45%;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
   }
 `;
 

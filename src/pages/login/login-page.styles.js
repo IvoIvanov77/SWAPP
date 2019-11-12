@@ -15,6 +15,9 @@ export const LoginPageTitleContainer = styled.div.attrs(props => ({
   font-size: 100px;
   color: #ffe300;
   text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
   @media (max-width: 480px) {
     font-size: 40px;
   }

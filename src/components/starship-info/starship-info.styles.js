@@ -6,6 +6,10 @@ export const StarshipInfoContainer = styled.div.attrs(props => ({
   margin: 3%;
   padding: 3px 0;
   border-radius: 10px;
+
+  @media (max-width: 1024px) {
+    margin: 0;
+  }
 `;
 
 StarshipInfoContainer.displayName = 'StarshipInfoContainer';
