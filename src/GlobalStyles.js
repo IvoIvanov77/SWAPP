@@ -20,10 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .starWarsFont {       
-        font-family: DistantGalaxy;
-        text-transform: none;   
-        font-weight: normal;  
-        letter-spacing: 0.2em              
-    }
-    
+        font-family: STARWARS;        
+        letter-spacing: 0.1em              
+    }    
 `;

@@ -40,7 +40,7 @@ class LoginPage extends React.Component {
     return (
       <LoginPageContainer>
         <LoginPageTitleContainer>
-          <ChangeTheme>swapp</ChangeTheme>
+          <ChangeTheme>SWAPP</ChangeTheme>
         </LoginPageTitleContainer>
         <LoginFormContainer onSubmit={this.handleSubmit}>
           <FormInputsContainer>
