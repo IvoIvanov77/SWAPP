@@ -39,7 +39,7 @@ export const CharacterNameContainer = styled.div.attrs(props => ({
   top: 50%;
   left: 30%;
   transform: translateY(-50%);
-  @media (max-width: 1200px) {
+  @media (max-width: 1600px) {
     left: 40%;
   }
 `;

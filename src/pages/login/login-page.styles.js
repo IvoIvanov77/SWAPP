@@ -3,7 +3,10 @@ import styled from 'styled-components';
 export const LoginPageContainer = styled.div`
   background-color: black;
   padding: 10px;
-  margin: 10% 20%;
+  margin: 10% 30%;
+  @media (max-width: 1200px) {
+    margin: 10% 20%;
+  }
   @media (max-width: 800px) {
     margin: 10% 0;
   }
