@@ -7,6 +7,10 @@ export const EpisodeContainer = styled.div.attrs(props => ({
   width: 20%;
   border-radius: 10px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media (max-width: 1500px) {
     width: 40%;
   }

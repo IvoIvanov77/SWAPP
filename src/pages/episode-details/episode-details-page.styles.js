@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 
 export const DetailsPageContainer = styled.div`
-  width: 80%;
+  width: 60%;
   margin: 50px auto;
+
+  @media (max-width: 1600px) {
+    width: 80%;
+  }
+  @media (max-width: 480px) {
+    width: 95%;
+  }
 `;
 
 export const HeaderContainer = styled.div.attrs(props => ({

@@ -23,21 +23,21 @@ const StarshipInfo = ({ starship }) => {
       <StarshipName>{name}</StarshipName>
       <StarshipImage src={image} alt={name} />
       <StarshipInfoFields>
-        <p>
+        <h3>
           Class: <span>{starshipClass}</span>
-        </p>
-        <p>
+        </h3>
+        <h3>
           Cost: <span>{cost}</span>
-        </p>
-        <p>
+        </h3>
+        <h3>
           Crew: <span>{crew}</span>
-        </p>
-        <p>
+        </h3>
+        <h3>
           Max Atmospheric Speed: <span>{maxAtmosphericSpeed}</span>
-        </p>
-        <p>
+        </h3>
+        <h3>
           Hiperdrive Rating: <span>{hyperdriveRating}</span>
-        </p>
+        </h3>
       </StarshipInfoFields>
     </StarshipInfoContainer>
   );

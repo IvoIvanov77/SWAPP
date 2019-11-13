@@ -13,17 +13,19 @@ export const GlobalStyle = createGlobalStyle`
         border-color: ${({ theme }) => theme.cards.borderColor};
         background-color: ${({ theme }) => theme.cards.background};
 
-        h2, h3, span {
+        h1, h2, span {
             color: ${({ theme }) => theme.primaryHeading.fontColor};
             font-weight: normal;  
-        }        
+        }   
+        
+        h3, h4 {
+            color: ${({ theme }) => theme.secandaryHeading.fontColor};
+            font-weight: normal;  
+        }  
     }
 
     .starWarsFont {       
-        font-family: DistantGalaxy;
-        text-transform: none;   
-        font-weight: normal;  
-        letter-spacing: 0.2em              
-    }
-    
+        font-family: STARWARS;        
+        letter-spacing: 0.1em              
+    }    
 `;

@@ -15,16 +15,16 @@ const CharacterInfo = ({ person }) => {
       <CharacterName>{name}</CharacterName>
       <CharacterImage src={image} alt={name}></CharacterImage>
       <CharacterInfoFields>
-        <p>
+        <h3>
           Height: <span>{height}</span>
-        </p>
-        <p>Weight:</p>
-        <p>
+        </h3>
+        <h3>Weight:</h3>
+        <h3>
           Spices: <span>{species.name}</span>
-        </p>
-        <p>
+        </h3>
+        <h3>
           Home World: <span>{homeworld.name}</span>
-        </p>
+        </h3>
       </CharacterInfoFields>
     </CharacterInfoContainer>
   );

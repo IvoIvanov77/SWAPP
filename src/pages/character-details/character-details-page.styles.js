@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const DetailsPageContainer = styled.div`
-  width: 80%;
+  width: 60%;
+
+  @media (max-width: 1600px) {
+    width: 80%;
+  }
+
   margin: 50px auto;
   @media (max-width: 480px) {
     width: 100%;
@@ -39,5 +44,6 @@ export const RightContainer = styled.div.attrs(props => ({
   width: 90%;
   h2 {
     text-align: center;
+    color: ${({ theme }) => theme.secandaryHeading.fontColor};
   }
 `;

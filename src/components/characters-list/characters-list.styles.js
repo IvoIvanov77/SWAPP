@@ -6,7 +6,7 @@ export const CharactersListContainer = styled.div`
   justify-content: space-between;
   @media (max-width: 1200px) {
     margin: 0;
-    justify-content: center;
+    justify-content: space-around;
   }
 `;
 

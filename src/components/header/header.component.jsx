@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <ChangeTheme>swap</ChangeTheme>
+        <ChangeTheme>SWAPP</ChangeTheme>
       </LogoContainer>
       <NavigationListItem>
         <LogoutButton />

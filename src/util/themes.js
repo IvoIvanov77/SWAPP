@@ -28,10 +28,14 @@ export const lightTheme = {
   primaryHeading: {
     fontColor: '#4BD5EE',
   },
+  secandaryHeading: {
+    fontColor: '​#3C4858',
+  },
   radar: {
     fontColor: '#4BD5EE',
     background: ' #000',
     grid: '#3C4858',
+    color: '#FFE300',
   },
 };
 
@@ -65,9 +69,13 @@ export const darkTheme = {
   primaryHeading: {
     fontColor: '#FFE300',
   },
+  secandaryHeading: {
+    fontColor: '#4BD5EE',
+  },
   radar: {
     fontColor: '#FFE300',
     background: ' #000',
     grid: '#333',
+    color: '#4BD5EE',
   },
 };
