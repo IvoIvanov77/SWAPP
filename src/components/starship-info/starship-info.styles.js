@@ -35,6 +35,9 @@ export const StarshipInfoFields = styled.div`
   width: 85%;
   margin: auto;
   font-weight: bold;
+  h3 {
+    margin: 0.5em;
+  }
 `;
 
 StarshipInfoFields.displayName = 'StarshipInfoFields';

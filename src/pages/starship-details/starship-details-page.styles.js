@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
 export const DetailsPageContainer = styled.div`
-  width: 80%;
+  width: 50%;
   margin: 50px auto;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
   @media (max-width: 480px) {
     width: 100%;
   }
@@ -19,6 +23,7 @@ StarshipName.displayName = 'StarshipName';
 
 export const StarshipModel = styled.h2`
   text-align: center;
+  color: ${({ theme }) => theme.secandaryHeading.fontColor};
 `;
 
 StarshipModel.displayName = 'StarshipModel';

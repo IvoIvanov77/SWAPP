@@ -13,10 +13,15 @@ export const GlobalStyle = createGlobalStyle`
         border-color: ${({ theme }) => theme.cards.borderColor};
         background-color: ${({ theme }) => theme.cards.background};
 
-        h2, h3, span {
+        h1, h2, span {
             color: ${({ theme }) => theme.primaryHeading.fontColor};
             font-weight: normal;  
-        }        
+        }   
+        
+        h3, h4 {
+            color: ${({ theme }) => theme.secandaryHeading.fontColor};
+            font-weight: normal;  
+        }  
     }
 
     .starWarsFont {       

@@ -39,7 +39,7 @@ describe('Episode component', () => {
         .find('StarshipNameContainer')
         .childAt(0)
         .type(),
-    ).toBe('h3');
+    ).toBe('h2');
   });
 
   it('should pass name to StarshipNameContainer first child', () => {

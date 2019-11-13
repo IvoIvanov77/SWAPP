@@ -31,19 +31,19 @@ const EpisodeDetaislPage = ({
       <HeaderContainer>
         <EpisodeImage src={image} alt={title}></EpisodeImage>
         <EpisodeTitleContainer>
-          <h2>Star Wars: Episode {episodeId}</h2>
-          <p>{title}</p>
+          <h1>Star Wars: Episode {episodeId}</h1>
+          <h3>{title}</h3>
         </EpisodeTitleContainer>
       </HeaderContainer>
       <EpisodeDetailsContainer>
         <EpisodeDescription>{openingCrawl}</EpisodeDescription>
         <EpisodeDetailsFooterContainer>
-          <p>
+          <h3>
             Director: <span>{director}</span>
-          </p>
-          <p>
+          </h3>
+          <h3>
             Release Date: <span>{releaseDate}</span>
-          </p>
+          </h3>
         </EpisodeDetailsFooterContainer>
       </EpisodeDetailsContainer>
       <CharactersContainer>

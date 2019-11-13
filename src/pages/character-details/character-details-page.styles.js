@@ -39,5 +39,6 @@ export const RightContainer = styled.div.attrs(props => ({
   width: 90%;
   h2 {
     text-align: center;
+    color: ${({ theme }) => theme.secandaryHeading.fontColor};
   }
 `;

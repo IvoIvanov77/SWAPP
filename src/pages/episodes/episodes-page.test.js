@@ -11,7 +11,6 @@ describe('EpisodesPage component', () => {
   });
 
   it('should render EpisodesPage component', () => {
-    console.log(wrapper.debug());
     expect(wrapper).toMatchSnapshot();
   });
 
