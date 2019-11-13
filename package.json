@@ -36,9 +36,11 @@
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "prettier --write",
-      "eslint --max-warnings=0",  
-      "npm test  --findRelatedTests",    
+      "eslint --max-warnings=0",         
       "git add"
+    ],
+    "src/**/*.component.jsx": [
+      "npm test  --findRelatedTests"
     ]
   },
   "eslintConfig": {
