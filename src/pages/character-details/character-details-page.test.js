@@ -11,10 +11,11 @@ describe('ChatacterDetaislPage component', () => {
   beforeEach(() => {
     mockPerson = {
       name: mockName,
-      starships: mockedStarships,
     };
 
-    wrapper = shallow(<ChatacterDetaislPage person={mockPerson} />);
+    wrapper = shallow(
+      <ChatacterDetaislPage person={mockPerson} starships={mockedStarships} />,
+    );
   });
 
   it('should render ChatacterDetaislPage component', () => {
