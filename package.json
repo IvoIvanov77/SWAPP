@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "format": "prettier --write src/**/*.{js,jsx,json,css,scss}",
-    "ci": "npm run lint && cross-env CI=true",
+    "ci": "npm run lint && cross-env CI=true npm test --coverage --watchAll=false",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -36,8 +36,11 @@
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "prettier --write",
-      "eslint --max-warnings=0",
+      "eslint --max-warnings=0",         
       "git add"
+    ],
+    "src/**/*.component.jsx": [
+      "npm test  --findRelatedTests"
     ]
   },
   "eslintConfig": {

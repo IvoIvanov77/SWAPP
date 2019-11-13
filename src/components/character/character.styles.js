@@ -37,7 +37,7 @@ export const CharacterNameContainer = styled.div.attrs(props => ({
 }))`
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 35%;
   transform: translateY(-50%);
   @media (max-width: 1600px) {
     left: 40%;

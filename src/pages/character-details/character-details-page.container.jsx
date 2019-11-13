@@ -44,8 +44,8 @@ const CharacterDetailsContainer = ({ match }) => {
   }
   if (data) {
     const { person } = data;
-    person.starships = person.starships.edges.map(e => e.node);
-    return <CharacterDetaislPage person={person} />;
+    const personStarships = person.starships.edges.map(e => e.node);
+    return <CharacterDetaislPage person={person} starships={personStarships} />;
   }
 };
 

@@ -10,8 +10,8 @@ import {
   RightContainer,
 } from './character-details-page.styles';
 
-const ChatacterDetaislPage = ({ person }) => {
-  const { name, starships } = person;
+const ChatacterDetaislPage = ({ person, starships }) => {
+  const { name } = person;
   return (
     <DetailsPageContainer>
       <CharacterName>{name}</CharacterName>
