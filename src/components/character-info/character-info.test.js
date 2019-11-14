@@ -7,6 +7,7 @@ describe('CharacterInfo component', () => {
   const name = 'name';
   const image = 'image';
   const height = '100';
+  const mass = '120';
   const homeworld = { name: 'homeworld' };
   const species = { name: 'species' };
 
@@ -15,6 +16,7 @@ describe('CharacterInfo component', () => {
       name,
       image,
       height,
+      mass,
       homeworld,
       species,
     };
@@ -42,11 +44,17 @@ describe('CharacterInfo component', () => {
         .find('span')
         .at(1)
         .text(),
-    ).toBe(species.name);
+    ).toBe(mass);
     expect(
       wrapper
         .find('span')
         .at(2)
+        .text(),
+    ).toBe(species.name);
+    expect(
+      wrapper
+        .find('span')
+        .at(3)
         .text(),
     ).toBe(homeworld.name);
   });
