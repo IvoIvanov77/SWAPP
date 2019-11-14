@@ -40,7 +40,7 @@
       "git add"
     ],
     "src/**/*.component.jsx": [
-      "npm test  --findRelatedTests"
+      "npm test --bail --findRelatedTests"
     ]
   },
   "eslintConfig": {
