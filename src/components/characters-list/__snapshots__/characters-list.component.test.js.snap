@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatactersList component with hasNextPage = false should render ChatactersList component 1`] = `ShallowWrapper {}`;
+
+exports[`ChatactersList component with hasNextPage = true should render ChatactersList component 1`] = `ShallowWrapper {}`;
