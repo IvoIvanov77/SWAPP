@@ -12,6 +12,7 @@ const GET_CHARACTER_BY_ID = gql`
       name
       image
       height
+      mass
       homeworld {
         name
       }

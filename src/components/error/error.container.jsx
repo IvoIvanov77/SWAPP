@@ -8,10 +8,11 @@ const ProcessError = ({ errorMessage }) => {
   const client = useApolloClient();
   const { FAILED_TO_FETCH } = ERORR_MESSAGES;
   client.writeData({ data: { authenticated: false } });
+  client.writeData({
+    data: { errorMessage: errorMessage ? errorMessage : FAILED_TO_FETCH },
+  });
   localStorage.removeItem(LOCAL_STORAGE_ITEMS.AUTH_TOKEN);
-  return (
-    <LoginPage errorMessage={errorMessage ? errorMessage : FAILED_TO_FETCH} />
-  );
+  return <LoginPage />;
 };
 
 export default ProcessError;

@@ -8,7 +8,7 @@ import {
 } from './character-info.styles';
 
 const CharacterInfo = ({ person }) => {
-  const { name, image, height, homeworld, species } = person;
+  const { name, image, height, mass, homeworld, species } = person;
 
   return (
     <CharacterInfoContainer>
@@ -18,7 +18,9 @@ const CharacterInfo = ({ person }) => {
         <h3>
           Height: <span>{height}</span>
         </h3>
-        <h3>Weight:</h3>
+        <h3>
+          Weight: <span>{mass}</span>
+        </h3>
         <h3>
           Spices: <span>{species.name}</span>
         </h3>

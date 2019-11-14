@@ -42,6 +42,7 @@
     "src/**/*.component.jsx": [
       "npm test --bail --findRelatedTests"
     ]
+    
   },
   "eslintConfig": {
     "extends": "react-app"
